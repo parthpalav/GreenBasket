@@ -9,7 +9,7 @@
 <body>
     <nav id="navbar">
     <ul>
-        <li class="home-li"><a href="index.html">Green Basket</a></li>
+        <li class="home-li"><a href="../Index/index.php">Green Basket</a></li>
         <li><a href="../Login/login.php">Login/SignUp</a></li>
         <li><a href="../Donation/donation.php">Donation</a></li>
         <li><a href="../Myprofile/myprofile.php">My Profie</a></li>
@@ -30,6 +30,9 @@
                 </li>
                 <li class = "slide">
                     <img src = "../assets/farm3.jpg" alt = "Farmer 3">
+                </li>
+                <li class = "slide">
+                    <img src = "../assets/farm4.jpg" alt = "Farmer 4">
                 </li>
             </ul>
         </div>

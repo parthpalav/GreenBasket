@@ -1,37 +1,48 @@
 <!-- <?php
-include 'connection.php';
-session_start();
+        include 'connection.php';
+        session_start();
 
-if (isset($_POST['signup'])) 
-{
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $dob = $_POST['dob'];
-    $phone = $_POST['phone'];
-    $address = $_POST['address'];
-    $role = $_POST['role'];
+        if (isset($_POST['signup'])) {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $dob = $_POST['dob'];
+            $phone = $_POST['phone'];
+            $address = $_POST['address'];
+            $role = $_POST['role'];
 
-    $query = "INSERT INTO users (name, email, password, dob, phone, address, role)
+            $query = "INSERT INTO users (name, email, password, dob, phone, address, role)
               VALUES ('$name', '$email', '$password', '$dob', '$phone', '$address', '$role')";
 
-    if (mysqli_query($conn, $query)) {
-        $_SESSION['email'] = $email;
-        header("Location: index.php");
-        exit();
-    } else {
-        $error_message = "Error creating account!";
-    }
-}
+            if (mysqli_query($conn, $query)) {
+                $_SESSION['email'] = $email;
+                header("Location: index.php");
+                exit();
+            } else {
+                $error_message = 'Error creating account!';
+            }
+        }
 ?> -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="login_style.css">
+    <link rel="stylesheet" href="signup_style.css">
 </head>
+
 <body>
+    <nav id="navbar">
+        <ul>
+            <li class="home-li"><a href="../Index/index.php">Green Basket</a></li>
+            <li><a href="../Login/login.php">Login/SignUp</a></li>
+            <li><a href="../Donation/donation.php">Donation</a></li>
+            <li><a href="../Myprofile/myprofile.php">My Profile</a></li>
+            <li><a href="../Basket/basket.php">Basket</a></li>
+        </ul>
+    </nav>
+
     <div class="form-container">
         <h2>Sign Up</h2>
         <?php if (isset($error_message)) echo "<p style='color: red;'>$error_message</p>"; ?>
@@ -72,4 +83,5 @@ if (isset($_POST['signup']))
         </form>
     </div>
 </body>
+
 </html>
