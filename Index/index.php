@@ -23,13 +23,13 @@
         <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
             <ul data-slides>
                 <li class = "slide" data-active>
-                    <img src = "farm1.jpg" alt = "Farmer 1">
+                    <img src = "../assets/farm1.jpg" alt = "Farmer 1">
                 </li>
                 <li class = "slide">
-                    <img src = "farm2.jpg" alt = "Farmer 2">
+                    <img src = "../assets/farm2.jpg" alt = "Farmer 2">
                 </li>
                 <li class = "slide">
-                    <img src = "farm3.jpg" alt = "Farmer 3">
+                    <img src = "../assets/farm3.jpg" alt = "Farmer 3">
                 </li>
             </ul>
         </div>

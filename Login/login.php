@@ -42,7 +42,7 @@ if (isset($_POST['login'])) {
 
         <p style="margin-top: 20px; text-align: center;">New here? Sign Up!</p>
         <div style="text-align: center;">
-            <a href="signup.php">
+            <a href="../SignUp/signup.php">
                 <button type="button">Sign Up</button>
             </a>
         </div>
