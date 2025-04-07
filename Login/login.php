@@ -40,7 +40,7 @@ if (isset($_POST['login'])) {
             <button type="submit" name="login">Login</button>
         </form>
 
-        <p style="margin-top: 20px; text-align: center;"><a style="text-decoration:none; color:black" href="../SignUp/signup.php">New here? Sign Up!</a></p>
+        <p style="margin-top: 20px; text-align: center;"><a style="text-decoration:none; color:black; " href="../SignUp/signup.php">New here? Sign Up!</a></p>
 
     </div>
 </body>
