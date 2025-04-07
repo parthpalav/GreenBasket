@@ -40,12 +40,8 @@ if (isset($_POST['login'])) {
             <button type="submit" name="login">Login</button>
         </form>
 
-        <p style="margin-top: 20px; text-align: center;">New here? Sign Up!</p>
-        <div style="text-align: center;">
-            <a href="../SignUp/signup.php">
-                <button type="button">Sign Up</button>
-            </a>
-        </div>
+        <p style="margin-top: 20px; text-align: center;"><a style="text-decoration:none; color:black" href="../SignUp/signup.php">New here? Sign Up!</a></p>
+
     </div>
 </body>
 </html>

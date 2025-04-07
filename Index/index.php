@@ -10,10 +10,10 @@
     <nav id="navbar">
     <ul>
         <li class="home-li"><a href="index.html">Green Basket</a></li>
-        <li><a href="login.php">Login/SignUp</a></li>
-        <li><a href="donation.php">Donation</a></li>
-        <li><a href="myprofile.php">My Profie</a></li>
-        <li><a href="basket.php ">Basket</a></li>
+        <li><a href="../Login/login.php">Login/SignUp</a></li>
+        <li><a href="../Donation/donation.php">Donation</a></li>
+        <li><a href="../Myprofile/myprofile.php">My Profie</a></li>
+        <li><a href="../Basket/basket.php ">Basket</a></li>
     </ul>
     </nav>
 
