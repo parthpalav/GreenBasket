@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: white;
+    border-bottom: 1px solid #426b1f;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav .home-li {
+    margin-right: auto;
+}
+
+nav li {
+    display: flex;
+}
+
+nav a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    padding: 1em 2em;
+    transition: #426B1F 150ms ease;
+}
+
+nav a:hover {
+    background-color: #426B1F;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #426b1f; 
+    border-bottom: 2px solid #365b19;
+}
+
+
+header .search-bar {
+    width: 65%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+header .search-bar input {
+    width: 500px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #426b1f;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.catalogue {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    width: 75%;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.catalogue .card {
+    width: calc(33% - 20px);
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #426b1f;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
+    transition: transform 0.3s;
+}
+
+.catalogue .card:hover {
+    transform: scale(1.02);
+}
+
+.catalogue .card .image-placeholder {
+    background-color: #ccc;
+    color: black;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.catalogue .card p {
+    color: #333;
+    font-size: 1rem;
+}
+
+.image-placeholder:hover {
+    scale: 1.03;
+    border-radius: 10px;
+    transition: 0.4s;
+}

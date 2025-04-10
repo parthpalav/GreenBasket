@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white; 
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* navbar code */
+nav {
+    background-color: white;
+    border-bottom: 1px solid #426b1f;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav .home-li {
+    margin-right: auto;
+}
+
+nav li {
+    display: flex;
+}
+
+nav a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    padding: 1em 2em;
+    transition: #426B1F 150ms ease;
+}
+
+nav a:hover {
+    background-color: #426B1F;
+    color: white;
+}
+
+
+/* donate form */
+.donation-form-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #f4fff2;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(66, 107, 31, 0.2);
+}
+
+.donation-form-container h1 {
+    text-align: center;
+    color: #426B1F;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #426B1F;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cdddc5;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-btn {
+    background-color: #426B1F;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #3a5e1b;
+}
