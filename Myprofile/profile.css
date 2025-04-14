@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar  */
+nav {
+    background-color: white;
+    border-bottom: 1px solid #426b1f;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav .home-li {
+    margin-right: auto;
+}
+
+nav li {
+    display: flex;
+}
+
+nav a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    padding: 1em 2em;
+    transition: #426B1F 150ms ease;
+}
+
+nav a:hover {
+    background-color: #426B1F;
+    color: white;
+}
+
+/* Profile image */
+
+svg{
+    margin-top: 30px;
+    margin-left: 10px;
+
+    width: 150px;
+    height: 150px;
+
+    border: 10px solid white;
+    border-radius: 100%;
+}
+
+#image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bottom{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#info{ 
+    border: 3px solid black;
+    border-radius: 30px ;
+    width: 500px;
+    height: auto;
+    min-height: 300px;
+    max-height: 600px;
+    padding: 30px 10px;
+}
+
+label{
+    font-weight: bolder;
+    font-size: larger;
+}
+
+
+#block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px;
+    padding-left: 50px;
+    font-size: larger;
+}
+
+p{
+    padding-left: 2px;
+    padding-top: 1px;
+}
+
