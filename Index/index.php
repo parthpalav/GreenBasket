@@ -47,8 +47,8 @@
     </main>
 
     <div class="button-container">
-        <button class="donate-button"><a href="donation.php">Donate Now</a></button>
-        <button class="market-button"><a href="market.php">Marketplace</a></button>
+        <button class="donate-button"><a href="../Donation/donation.php">Donate Now</a></button>
+        <button class="market-button"><a href="../Marketplace/marketplace.php">Marketplace</a></button>
     </div>
 
 
