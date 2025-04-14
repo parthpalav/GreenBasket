@@ -24,6 +24,7 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="login_style.css">
+    <link rel="stylesheet" href="background.css">
 </head>
 
 <body>
@@ -36,7 +37,7 @@
             <li><a href="../Basket/basket.php">Basket</a></li>
         </ul>
     </nav>
-
+        
     <div class="form-container">
         <h2>Login</h2>
         <?php if (isset($error_message)) echo "<p style='color: red;'>$error_message</p>"; ?>

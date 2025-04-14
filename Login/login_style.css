@@ -5,7 +5,11 @@
 }
 
 body {
-    background-color: #ffffff;
+    overflow:hidden;
+    background-color:#000030;
+    background-image:url("https://images.unsplash.com/photo-1536152470836-b943b246224c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80");
+    background-size:100%;
+    background-position:center;
     font-family: Arial, sans-serif;
 }
 
@@ -13,6 +17,7 @@ body {
 nav {
     background-color: white;
     border-bottom: 1px solid #426b1f;
+    
 }
 
 nav ul {
@@ -37,6 +42,7 @@ nav a {
 }
 
 nav a:hover {
+    transition: 0.1s ea;
     background-color: #426B1F;
     color: white;
 }
