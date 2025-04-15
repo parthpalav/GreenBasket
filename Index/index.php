@@ -15,7 +15,7 @@
             <li><a href="../Login/login.php">Login/SignUp</a></li>
             <li><a href="../Donation/donation.php">Donation</a></li>
             <li><a href="../Myprofile/myprofile.php">My Profie</a></li>
-            <li id="backetli"><a href="../Basket/basket.php ">Basket</a></li>
+            <li id="backetli"><a href="../Minimarket/minimarket.php ">Marketplace</a></li>
         </ul>
     </nav>
 
@@ -101,19 +101,17 @@
     <div id="box">
         <div id="market-right">
             <div class="card">
-                <img src="../assets/index_pg_tool/image2.jpeg" alt="">
+                <img src="../assets/index_pg_tool/donation.webp" alt="">
                 <div class="card-content">
                     <h2>
-                        Card Heading
+                        Donation
                     </h2>
                     <p>
 
                     </p>
                     <a href="#" class="button">
-                        Find out more
-                        <span class="material-symbols-outlined">
-                            arrow_right_alt
-                        </span>
+                        We provide money for the people in need
+                        
                     </a>
                 </div>
             </div>
