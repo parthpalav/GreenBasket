@@ -180,7 +180,7 @@ session_start();
 
         <div id="vision_photos">
             <h1 id="vision_heading">
-                Our Vision
+                About us
             </h1>
             <p id="vision_text">
                 At Green Basket, we envision a world where sustainable agriculture and compassionate giving come
