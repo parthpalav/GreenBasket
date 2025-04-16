@@ -271,7 +271,7 @@ main {
 }
 
 /* Buttots below Main */
-button {
+.p-button {
   padding: 10px 20px;
   background-color: #426b1f;
   border: none;
@@ -279,19 +279,19 @@ button {
   font-size: 25px;
 }
 
-button a {
+.p-button a {
   text-decoration: none;
   color: white;
   font-weight: bold;
 }
 
-button:hover {
+.p-button:hover {
   background-color: #426b1f;
   color: white;
   scale: 1.02;
 }
 
-button a:hover {
+.p-button a:hover {
   color: #e0e0e0;
 }
 .button-container {
