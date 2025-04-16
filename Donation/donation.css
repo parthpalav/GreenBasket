@@ -7,6 +7,10 @@
 body {
     background-color: white; 
     font-family: 'Segoe UI', sans-serif;
+    background-image: url(../assets/donation_pg.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* navbar code */

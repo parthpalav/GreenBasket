@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  overflow: hidden;
+  overflow-x:hidden;
   background-color: #000030;
   background-image: url(../assets/background_image.avif);
   background-size: 100%;
@@ -16,6 +16,7 @@ body {
 /* NAVBAR */
 nav {
   background-color: white;
+  position: sticky;
   border-bottom: 1px solid #426b1f;
 }
 
@@ -63,6 +64,7 @@ nav a:hover {
   margin: 60px auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   min-height: 100px;
+  transform: translateY(-40px);
 }
 
 .form-container h2 {
