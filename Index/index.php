@@ -12,7 +12,12 @@
     <nav id="navbar">
         <ul>
             <li class="home-li"><a href="../Index/index.php">Green Basket</a></li>
-            <li><a href="../Login/login.php">Login/SignUp</a></li>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <li><a href="../Login/logout.php">Sign Out</a></li>
+            <?php else: ?>
+                <li><a href="../Login/login.php">Login/SignUp</a></li>
+            <?php endif; ?>
+
             <li><a href="../Donation/donation.php">Donation</a></li>
             <li><a href="../Myprofile/myprofile.php">My Profie</a></li>
             <li id="backetli"><a href="../Minimarket/minimarket.php ">Marketplace</a></li>
@@ -111,7 +116,7 @@
                     </p>
                     <a href="#" class="button">
                         We provide money for the people in need
-                        
+
                     </a>
                 </div>
             </div>
@@ -205,7 +210,7 @@
             <div id="details">
                 <div id="name">
                     <h2>Palak Shah</h2>
-                    
+
                 </div>
             </div>
         </div>
@@ -217,7 +222,7 @@
             </div>
             <div id="details">
                 <h2>Pratik Patil</h2>
-                
+
             </div>
         </div>
 
@@ -228,18 +233,17 @@
             </div>
             <div id="details">
                 <h2>Parth Palav</h2>
-                
+
             </div>
         </div>
 
     </div>
 
     <footer>
-        
+
     </footer>
 
     <script>
-
         // For Image slideshow
         const buttons = document.querySelectorAll("[data-carousel-button]");
 
@@ -260,11 +264,14 @@
 
         //For changeing 
         window.addEventListener("load", init);
+
         function init() {
             const img = document.querySelector("img");
-            const { width } = img.getBoundingClientRect();
+            const {
+                width
+            } = img.getBoundingClientRect();
             const halfImgWidth = width / 2;
-            img.addEventListener("mousemove", function (e) {
+            img.addEventListener("mousemove", function(e) {
                 const xPos = e.pageX - img.offsetLeft;
                 this.classList.remove("cursor-prev", "cursor-next");
                 if (xPos > halfImgWidth) {
