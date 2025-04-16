@@ -84,7 +84,16 @@ session_start();
 
         </div>
         <div id="right">
-
+            <div id="box"></div>
+            <div id="box"></div>
+            <div id="box"></div>
+            <div id="box"></div>
+            <div id="box"></div>
+            <div id="box"></div>
+            <div id="box"></div>
+            <div id="box"></div>
+            <div id="box"></div>
+            <div id="box"></div>
         </div>
     </main>
 </body>

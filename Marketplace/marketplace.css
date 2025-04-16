@@ -70,7 +70,7 @@ nav {
     border: 2px solid black;
     border-radius: 20px;
     padding: 19px 20px;
-
+    max-height: 70vh;
     box-shadow: rgb(147, 145, 145) -10px 10px;
   }
 
@@ -120,14 +120,6 @@ nav {
   }
 
 
-  #right{
-    width: 70%;
-    height: max-content;
-    border-radius: 20px ;
-    border: 2px solid black;
-    padding: 40px;
-  }
-  
   h1, h4, h3{
     cursor: default;
   }
@@ -138,4 +130,37 @@ nav {
   input:hover, label:hover{
     scale: 1.02 ;
     text-shadow: rgb(184, 183, 183) 2px 2px 2px ;
+  }
+
+  /* right side */
+
+  #right{
+    width: 70%;
+    height: max-content;
+    border-radius: 20px ;
+    border: 2px solid black;
+    padding: 40px;
+
+    display: grid;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 60px;
+  }
+  
+
+  #box{
+    border-radius: 10px ;
+    border: 2px solid black;
+    height: 40vh ;
+    width: 30vh;
+  }
+
+  #box:hover{
+    transition: 0.15s ease-in-out;
+    cursor: pointer;
+    scale: 1.01;
+    transform: translateY(-5px);
+    box-shadow: rgb(180, 180, 180) 1px 10px 10px;
   }
