@@ -54,6 +54,9 @@ if (isset($_POST['signup'])) {
                 $stmt->bindParam(':role', $role);
                 $stmt->bindParam(':profile_pic', $profile_pic);
 
+                // Debug: Output the role being inserted
+                echo "Role being inserted: " . htmlspecialchars($role) . "<br>";
+                
                 if ($stmt->execute()) {
                     $_SESSION['email'] = $email;
                     $_SESSION['user_id'] = $conn->lastInsertId();

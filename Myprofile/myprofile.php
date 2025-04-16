@@ -30,7 +30,7 @@ if (!$userData) {
     $userDOB = htmlspecialchars($userData['dob']);
     $userPhone = htmlspecialchars($userData['phone']);
     $userAddress = htmlspecialchars($userData['address']);
-    $profilePicture = !empty($userData['profile_picture']) ? '../uploads/' . htmlspecialchars($userData['profile_picture']) : '';
+    $profilePicture = !empty($userData['profile_pic']) ? '../uploads/profile_pics/' . htmlspecialchars($userData['profile_pic']) : '';
 }
 ?>
 <!DOCTYPE html>
@@ -55,7 +55,7 @@ if (!$userData) {
             <?php endif; ?>
             <li><a href="../Donation/donation.php">Donation</a></li>
             <li><a href="../Myprofile/myprofile.php">My Profile</a></li>
-            <li><a href="../Basket/basket.php">Basket</a></li>
+            <li><a href="../Minimarket/minimarket.php">Marketplace</a></li>
         </ul>
     </nav>
 
@@ -76,6 +76,7 @@ if (!$userData) {
                     <h1><?php echo $userName; ?></h1>
                     <span class="user-role"><?php echo $userRole; ?></span>
                 </div>
+                
             </div>
         </header>
 
