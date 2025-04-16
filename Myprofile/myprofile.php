@@ -110,6 +110,10 @@ if (!$userData) {
                     </div>
                 </div>
             </section>
+
+            <section class="history-card">
+                    
+            </section>
         </main>
 
         <footer>
