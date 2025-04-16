@@ -31,6 +31,7 @@ nav .home-li {
   margin-right: auto;
   font-weight: bolder;
   font-size: x-large;
+  margin-left: 20px;
 }
 
 nav .home-li a {
@@ -60,7 +61,9 @@ nav a:hover {
   color: white;
 }
 
-
+#backetli a{
+  padding-right: 30px;
+}
 
 /* end of nav  */
 
@@ -203,6 +206,13 @@ main{
   height: 100%;
   padding: 10px;
   border-radius: 10px;
+
+  box-shadow: -5px 10px rgb(136, 136, 136) ;
+}
+#left:hover{
+  transition: 0.2s ease-in-out;
+  scale: 1.01;
+  box-shadow: -6px 15px rgb(136, 136, 136) ;
 }
 
 #top{
@@ -251,6 +261,10 @@ main{
   border-radius: 10px;
 }
 
+#right:hover{
+  transition: 0.2s ease-in-out;
+  box-shadow: 2px 20px 10px -5px rgba(0,0,0,0.2);
+}
 
 /* Tractor Section */
 
@@ -272,6 +286,8 @@ main{
   font-size: 30px;
   margin-bottom: 40px;
 }
+
+
 #main_grid #header h1:hover{
   transform: translateY(-5px);
   box-shadow: rgba(0, 0, 0, 0.151) 0px 5px 2px;
@@ -281,7 +297,7 @@ main{
   display: flex;
   border: 2px solid black;
   border-radius: 20px;
-  width: 200px;
+  width: 400px;
   justify-content: center;
   cursor: pointer;
 }
