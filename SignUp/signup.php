@@ -31,7 +31,7 @@ if (isset($_POST['signup'])) {
             $targetPath = $uploadDir . $fileName;
 
             if (move_uploaded_file($fileTmp, $targetPath)) {
-                $profile_pic = $fileName; 
+                $profile_pic = $fileName;
             } else {
                 $error_message = "Failed to upload profile picture.";
             }
@@ -56,7 +56,7 @@ if (isset($_POST['signup'])) {
 
                 // Debug: Output the role being inserted
                 echo "Role being inserted: " . htmlspecialchars($role) . "<br>";
-                
+
                 if ($stmt->execute()) {
                     $_SESSION['email'] = $email;
                     $_SESSION['user_id'] = $conn->lastInsertId();
@@ -87,14 +87,21 @@ if (isset($_POST['signup'])) {
     <nav id="navbar">
         <ul>
             <li class="home-li"><a href="../Index/index.php">Green Basket</a></li>
+
             <?php if (isset($_SESSION['user_id'])): ?>
                 <li><a href="../Login/logout.php">Sign Out</a></li>
             <?php else: ?>
                 <li><a href="../Login/login.php">Login/SignUp</a></li>
             <?php endif; ?>
-            <li><a href="../Donation/donation.php">Donation</a></li>
+
+            <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'farmer'): ?>
+                <li><a href="../Sell/sellerform.php">Sell</a></li>
+            <?php else: ?>
+                <li><a href="../Donation/donation.php">Donation</a></li>
+            <?php endif; ?>
+
             <li><a href="../Myprofile/myprofile.php">My Profile</a></li>
-            <li><a href="../Basket/basket.php">Basket</a></li>
+            <li id="backetli"><a href="../Minimarket/minimarket.php">Marketplace</a></li>
         </ul>
     </nav>
 

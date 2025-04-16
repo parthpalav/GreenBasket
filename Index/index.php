@@ -15,15 +15,21 @@ session_start();
     <nav id="navbar">
         <ul>
             <li class="home-li"><a href="../Index/index.php">Green Basket</a></li>
+
             <?php if (isset($_SESSION['user_id'])): ?>
                 <li><a href="../Login/logout.php">Sign Out</a></li>
             <?php else: ?>
                 <li><a href="../Login/login.php">Login/SignUp</a></li>
             <?php endif; ?>
 
-            <li><a href="../Donation/donation.php">Donation</a></li>
-            <li><a href="../Myprofile/myprofile.php">My Profie</a></li>
-            <li id="backetli"><a href="../Minimarket/minimarket.php ">Marketplace</a></li>
+            <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'seller'): ?>
+                <li><a href="../Sell/sellerform.php">Sell</a></li>
+            <?php else: ?>
+                <li><a href="../Donation/donation.php">Donation</a></li>
+            <?php endif; ?>
+
+            <li><a href="../Myprofile/myprofile.php">My Profile</a></li>
+            <li id="backetli"><a href="../Minimarket/minimarket.php">Marketplace</a></li>
         </ul>
     </nav>
 

@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f9f4;
+    padding: 40px;
+}
+/* NAV BAR */
+nav {
+    background-color: white;
+    border-bottom: 1px solid #426b1f;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  nav .home-li {
+    margin-right: auto;
+    font-weight: bolder;
+    font-size: x-large;
+  }
+  
+  nav .home-li a {
+    padding: 10px;
+    color: #426b1f;
+  }
+  
+  nav li {
+    display: flex;
+  }
+  
+  nav a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    padding: 1em 2em;
+    transition: #426b1f 150ms ease;
+  }
+  
+  nav a:hover {
+    transition: 0.1s ea;
+    background-color: #426b1f;
+    color: white;
+  }
+
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #2f7d32;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background: #2f7d32;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #256427;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.success {
+    color: green;
+    text-align: center;
+    margin-bottom: 10px;
+}
