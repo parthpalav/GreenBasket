@@ -1,37 +1,43 @@
-<!-- <?php
-        include 'connection.php';
-        session_start();
+<?php
+    include '../connect.php'; 
 
-        if (isset($_POST['signup'])) {
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $dob = $_POST['dob'];
-            $phone = $_POST['phone'];
-            $address = $_POST['address'];
-            $role = $_POST['role'];
+    if (isset($_POST['signup'])) {
+        $first_name = $_POST['fname'];
+        $last_name = $_POST['lname'];
+        $email = $_POST['email'];
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $dob = $_POST['dob'];
+        $phone = $_POST['phone'];
+        $address = $_POST['address'];
+        $role = strtolower($_POST['role']); 
 
-            $query = "INSERT INTO users (name, email, password, dob, phone, address, role)
-              VALUES ('$name', '$email', '$password', '$dob', '$phone', '$address', '$role')";
+        $query = "INSERT INTO Users (first_name, last_name, email, password, dob, phone, address, role)
+                  VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
-            if (mysqli_query($conn, $query)) {
+        $stmt = mysqli_prepare($con, $query);
+        if ($stmt) {
+            mysqli_stmt_bind_param($stmt, 'ssssssss', $first_name, $last_name, $email, $password, $dob, $phone, $address, $role);
+            if (mysqli_stmt_execute($stmt)) {
                 $_SESSION['email'] = $email;
-                header("Location: index.php");
+                // Set a cookie for 1 day
+                setcookie("user_email", $email, time() + (24 * 60 * 60), "/");
+                header("Location: ../Index/index.php");
                 exit();
             } else {
-                $error_message = 'Error creating account!';
+                $error_message = "Signup failed. Please try again.";
             }
+        } else {
+            $error_message = "Error preparing statement: " . mysqli_error($con);
         }
-?> -->
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
     <link rel="stylesheet" href="signup_style.css">
 </head>
-
 <body>
     <nav id="navbar">
         <ul>
@@ -65,7 +71,8 @@
             </div>
             <div class="input-group">
                 <label for="dob">Date of Birth:</label>
-                <input type="date" name="dob" required>
+                <input type="date" name="dob" required min="1910-01-01">
+
             </div>
             <div class="input-group">
                 <label for="phone">Phone Number:</label>
@@ -78,14 +85,12 @@
             <div class="input-group">
                 <label for="role">Select Role:</label>
                 <select name="role" required>
-                    <option value="Customer">Customer</option>
-                    <option value="Farmer">Seller</option>
+                    <option value="customer">Customer</option>
+                    <option value="farmer">Seller</option>
                 </select>
             </div>
             <button type="submit" name="signup">Sign Up</button>
         </form>
     </div>
 </body>
-
 </html>
-

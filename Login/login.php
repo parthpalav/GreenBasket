@@ -1,32 +1,43 @@
-<!-- <?php
-        include 'connection.php';
-        session_start();
+<?php
+include '../connect.php';
+session_start();
 
-        if (isset($_POST['login'])) {
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+if (isset($_POST['login'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-            $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-            $result = mysqli_query($conn, $query);
-            if (mysqli_num_rows($result) == 1) {
-                $_SESSION['email'] = $email;
-                header("Location: index.php");
-                exit();
-            } else {
-                $error_message = "Invalid email or password!";
-            }
+    $query = "SELECT * FROM Users WHERE email = ?";
+    $stmt = mysqli_prepare($con, $query);
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+    if (mysqli_num_rows($result) == 1) {
+        $user = mysqli_fetch_assoc($result);
+
+        // Using cookie to create a 1 day session
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['email'] = $email;
+            setcookie("user_email", $email, time() + (24 * 60 * 60), "/");
+            header("Location: ../Index/index.php");
+            exit();
+        } else {
+            $error_message = "Invalid email or password!";
         }
-?> -->
+    } else {
+        $error_message = "Invalid email or password!";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="login_style.css">
     <link rel="stylesheet" href="background.css">
 </head>
-
 <body>
     <nav id="navbar">
         <ul>
@@ -58,5 +69,4 @@
         </p>
     </div>
 </body>
-
 </html>
