@@ -22,6 +22,7 @@ if (!$userData) {
     $userDOB = 'Unknown Date';
     $userPhone = 'Unknown Phone';
     $userAddress = 'Unknown Address';
+    $profilePicture = '';
 } else {
     $userName = htmlspecialchars($userData['first_name'] . ' ' . $userData['last_name']);
     $userRole = htmlspecialchars($userData['role']);
@@ -29,10 +30,9 @@ if (!$userData) {
     $userDOB = htmlspecialchars($userData['dob']);
     $userPhone = htmlspecialchars($userData['phone']);
     $userAddress = htmlspecialchars($userData['address']);
+    $profilePicture = !empty($userData['profile_picture']) ? '../uploads/' . htmlspecialchars($userData['profile_picture']) : '';
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +53,6 @@ if (!$userData) {
             <?php else: ?>
                 <li><a href="../Login/login.php">Login/SignUp</a></li>
             <?php endif; ?>
-
             <li><a href="../Donation/donation.php">Donation</a></li>
             <li><a href="../Myprofile/myprofile.php">My Profile</a></li>
             <li><a href="../Basket/basket.php">Basket</a></li>
@@ -65,11 +64,13 @@ if (!$userData) {
             <div class="profile-background"></div>
             <div class="profile-info-container">
                 <div class="profile-picture">
-                    <div class="placeholder-image">
-                        <?php
-                        echo strtoupper(substr($userName, 0, 1));
-                        ?>
-                    </div>
+                    <?php if ($profilePicture): ?>
+                        <img src="<?php echo $profilePicture; ?>" alt="Profile Picture" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid #ccc;">
+                    <?php else: ?>
+                        <div class="placeholder-image">
+                            <?php echo strtoupper(substr($userName, 0, 1)); ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="profile-details">
                     <h1><?php echo $userName; ?></h1>
@@ -117,5 +118,4 @@ if (!$userData) {
 
     <script src="profile.js"></script>
 </body>
-
 </html>

@@ -6,41 +6,66 @@ if (isset($_POST['signup'])) {
     $first_name = $_POST['fname'];
     $last_name = $_POST['lname'];
     $email = $_POST['email'];
-    $password = $_POST['password']; // No hashing
+    $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
     $dob = $_POST['dob'];
     $phone = $_POST['phone'];
     $address = $_POST['address'];
     $role = strtolower($_POST['role']);
+    $profile_picture = null;
 
+    // Check if passwords match
     if ($password !== $confirm_password) {
         $error_message = "Passwords do not match.";
     } else {
-        try {
-            $query = "INSERT INTO Users (first_name, last_name, email, password, dob, phone, address, role)
-                      VALUES (:first_name, :last_name, :email, :password, :dob, :phone, :address, :role)";
 
-            $stmt = $conn->prepare($query);
-            $stmt->bindParam(':first_name', $first_name);
-            $stmt->bindParam(':last_name', $last_name);
-            $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':password', $password); // Storing plain password
-            $stmt->bindParam(':dob', $dob);
-            $stmt->bindParam(':phone', $phone);
-            $stmt->bindParam(':address', $address);
-            $stmt->bindParam(':role', $role);
+        if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] === 0) {
+            $uploadDir = '../uploads/profile_pictures/';
 
-            if ($stmt->execute()) {
-                $_SESSION['email'] = $email;
-                $_SESSION['user_id'] = $conn->lastInsertId();
-                setcookie("user_email", $email, time() + (24 * 60 * 60), "/");
-                header("Location: ../Index/index.php");
-                exit();
-            } else {
-                $error_message = "Signup failed. Please try again.";
+            if (!file_exists($uploadDir)) {
+                mkdir($uploadDir, 0755, true);
             }
-        } catch (PDOException $e) {
-            $error_message = "Error: " . $e->getMessage();
+
+            $fileTmp = $_FILES['profile_picture']['tmp_name'];
+            $fileName = time() . '_' . basename($_FILES['profile_picture']['name']);
+            $targetPath = $uploadDir . $fileName;
+
+            if (move_uploaded_file($fileTmp, $targetPath)) {
+                $profile_picture = $fileName; 
+            } else {
+                $error_message = "Failed to upload profile picture.";
+            }
+        }
+
+        // Proceed if no upload error
+        if (!isset($error_message)) {
+            try {
+                $query = "INSERT INTO Users (first_name, last_name, email, password, dob, phone, address, role, profile_picture)
+                          VALUES (:first_name, :last_name, :email, :password, :dob, :phone, :address, :role, :profile_picture)";
+
+                $stmt = $conn->prepare($query);
+                $stmt->bindParam(':first_name', $first_name);
+                $stmt->bindParam(':last_name', $last_name);
+                $stmt->bindParam(':email', $email);
+                $stmt->bindParam(':password', $password);
+                $stmt->bindParam(':dob', $dob);
+                $stmt->bindParam(':phone', $phone);
+                $stmt->bindParam(':address', $address);
+                $stmt->bindParam(':role', $role);
+                $stmt->bindParam(':profile_picture', $profile_picture);
+
+                if ($stmt->execute()) {
+                    $_SESSION['email'] = $email;
+                    $_SESSION['user_id'] = $conn->lastInsertId();
+                    setcookie("user_email", $email, time() + (24 * 60 * 60), "/");
+                    header("Location: ../Index/index.php");
+                    exit();
+                } else {
+                    $error_message = "Signup failed. Please try again.";
+                }
+            } catch (PDOException $e) {
+                $error_message = "Error: " . $e->getMessage();
+            }
         }
     }
 }
@@ -73,7 +98,8 @@ if (isset($_POST['signup'])) {
     <div class="form-container">
         <h2>Sign Up</h2>
         <?php if (isset($error_message)) echo "<p style='color: red;'>$error_message</p>"; ?>
-        <form action="" method="POST" onsubmit="return validateForm();">
+        <form action="" method="POST" enctype="multipart/form-data" onsubmit="return validateForm();">
+
             <div class="input-group">
                 <label for="name">First Name:</label>
                 <input type="text" name="fname" required>
@@ -113,9 +139,9 @@ if (isset($_POST['signup'])) {
                     <option value="farmer">Seller</option>
                 </select>
             </div>
-            <div class = "input-group">
-                <label for = "profile_picture"> Upload Profile Picture: </label>
-                <input type = "file" name = "profile_picture" accept = "image/*" required>
+            <div class="input-group">
+                <label for="profile_picture"> Upload Profile Picture: </label>
+                <input type="file" name="profile_picture" accept="image/*" required>
             </div>
             <button type="submit" name="signup">Sign Up</button>
         </form>
