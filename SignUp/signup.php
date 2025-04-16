@@ -1,48 +1,64 @@
 <?php
-    include '../connect.php'; 
+include '../connect.php';
+session_start();
 
-    if (isset($_POST['signup'])) {
-        $first_name = $_POST['fname'];
-        $last_name = $_POST['lname'];
-        $email = $_POST['email'];
-        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-        $dob = $_POST['dob'];
-        $phone = $_POST['phone'];
-        $address = $_POST['address'];
-        $role = strtolower($_POST['role']); 
+if (isset($_POST['signup'])) {
+    $first_name = $_POST['fname'];
+    $last_name = $_POST['lname'];
+    $email = $_POST['email'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $dob = $_POST['dob'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+    $role = strtolower($_POST['role']);
 
+    try {
         $query = "INSERT INTO Users (first_name, last_name, email, password, dob, phone, address, role)
-                  VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                  VALUES (:first_name, :last_name, :email, :password, :dob, :phone, :address, :role)";
 
-        $stmt = mysqli_prepare($con, $query);
-        if ($stmt) {
-            mysqli_stmt_bind_param($stmt, 'ssssssss', $first_name, $last_name, $email, $password, $dob, $phone, $address, $role);
-            if (mysqli_stmt_execute($stmt)) {
-                $_SESSION['email'] = $email;
-                // Set a cookie for 1 day
-                setcookie("user_email", $email, time() + (24 * 60 * 60), "/");
-                header("Location: ../Index/index.php");
-                exit();
-            } else {
-                $error_message = "Signup failed. Please try again.";
-            }
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':first_name', $first_name);
+        $stmt->bindParam(':last_name', $last_name);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':password', $password);
+        $stmt->bindParam(':dob', $dob);
+        $stmt->bindParam(':phone', $phone);
+        $stmt->bindParam(':address', $address);
+        $stmt->bindParam(':role', $role);
+
+        if ($stmt->execute()) {
+            $_SESSION['email'] = $email;
+            $_SESSION['user_id'] = $conn->lastInsertId();
+            setcookie("user_email", $email, time() + (24 * 60 * 60), "/");
+            header("Location: ../Index/index.php");
+            exit();
         } else {
-            $error_message = "Error preparing statement: " . mysqli_error($con);
+            $error_message = "Signup failed. Please try again.";
         }
+    } catch (PDOException $e) {
+        $error_message = "Error: " . $e->getMessage();
     }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
     <link rel="stylesheet" href="signup_style.css">
 </head>
+
 <body>
     <nav id="navbar">
         <ul>
             <li class="home-li"><a href="../Index/index.php">Green Basket</a></li>
-            <li><a href="../Login/login.php">Login/SignUp</a></li>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <li><a href="../Login/logout.php">Sign Out</a></li>
+            <?php else: ?>
+                <li><a href="../Login/login.php">Login/SignUp</a></li>
+            <?php endif; ?>
+
             <li><a href="../Donation/donation.php">Donation</a></li>
             <li><a href="../Myprofile/myprofile.php">My Profile</a></li>
             <li><a href="../Basket/basket.php">Basket</a></li>
@@ -93,4 +109,5 @@
         </form>
     </div>
 </body>
+
 </html>

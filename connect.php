@@ -2,11 +2,17 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$con = mysqli_connect('localhost', 'root', '', 'farmermarketplace');
+$host = 'localhost';
+$dbname = 'farmermarketplace'; 
+$username = 'root';      
+$password = '';    
 
-if ($con) {
-// Connection succesful
-} else {
-    die("Connection failed: " . mysqli_connect_error());
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
 }
 ?>
