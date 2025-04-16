@@ -60,7 +60,7 @@
             </div>
 
             <div id="button">
-                <button class="market-button"><a href="../Marketplace/marketplace.php">Marketplace</a></button>
+                <button class="p-button"><a href="../Marketplace/marketplace.php">Marketplace</a></button>
             </div>
 
 
