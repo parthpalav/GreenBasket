@@ -12,26 +12,26 @@ if (isset($_POST['signup'])) {
     $phone = $_POST['phone'];
     $address = $_POST['address'];
     $role = strtolower($_POST['role']);
-    $profile_picture = null;
+    $profile_pic = null;
 
     // Check if passwords match
     if ($password !== $confirm_password) {
         $error_message = "Passwords do not match.";
     } else {
 
-        if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] === 0) {
-            $uploadDir = '../uploads/profile_pictures/';
+        if (isset($_FILES['profile_pic']) && $_FILES['profile_pic']['error'] === 0) {
+            $uploadDir = '../uploads/profile_pics/';
 
             if (!file_exists($uploadDir)) {
                 mkdir($uploadDir, 0755, true);
             }
 
-            $fileTmp = $_FILES['profile_picture']['tmp_name'];
-            $fileName = time() . '_' . basename($_FILES['profile_picture']['name']);
+            $fileTmp = $_FILES['profile_pic']['tmp_name'];
+            $fileName = time() . '_' . basename($_FILES['profile_pic']['name']);
             $targetPath = $uploadDir . $fileName;
 
             if (move_uploaded_file($fileTmp, $targetPath)) {
-                $profile_picture = $fileName; 
+                $profile_pic = $fileName; 
             } else {
                 $error_message = "Failed to upload profile picture.";
             }
@@ -40,8 +40,8 @@ if (isset($_POST['signup'])) {
         // Proceed if no upload error
         if (!isset($error_message)) {
             try {
-                $query = "INSERT INTO Users (first_name, last_name, email, password, dob, phone, address, role, profile_picture)
-                          VALUES (:first_name, :last_name, :email, :password, :dob, :phone, :address, :role, :profile_picture)";
+                $query = "INSERT INTO Users (first_name, last_name, email, password, dob, phone, address, role, profile_pic)
+                          VALUES (:first_name, :last_name, :email, :password, :dob, :phone, :address, :role, :profile_pic)";
 
                 $stmt = $conn->prepare($query);
                 $stmt->bindParam(':first_name', $first_name);
@@ -52,7 +52,7 @@ if (isset($_POST['signup'])) {
                 $stmt->bindParam(':phone', $phone);
                 $stmt->bindParam(':address', $address);
                 $stmt->bindParam(':role', $role);
-                $stmt->bindParam(':profile_picture', $profile_picture);
+                $stmt->bindParam(':profile_pic', $profile_pic);
 
                 if ($stmt->execute()) {
                     $_SESSION['email'] = $email;
@@ -140,8 +140,8 @@ if (isset($_POST['signup'])) {
                 </select>
             </div>
             <div class="input-group">
-                <label for="profile_picture"> Upload Profile Picture: </label>
-                <input type="file" name="profile_picture" accept="image/*" required>
+                <label for="profile_pic"> Upload Profile Picture: </label>
+                <input type="file" name="profile_pic" accept="image/*" required>
             </div>
             <button type="submit" name="signup">Sign Up</button>
         </form>
