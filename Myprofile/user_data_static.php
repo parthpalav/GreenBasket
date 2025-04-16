@@ -22,7 +22,7 @@ function getUserData($conn, $userId) {
             'dob' => 'April 12, 1985',
             'phone' => '+1-555-123-4567',
             'address' => '123 Green Street, Cityville, ST 12345',
-            'role' => 'Farmer'
+            'role' => '#Farmer'
         ],
         2 => [
             'name' => 'Sarah Johnson',
