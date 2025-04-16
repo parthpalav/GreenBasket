@@ -23,34 +23,70 @@ session_start();
 
             <li><a href="../Donation/donation.php">Donation</a></li>
             <li><a href="../Myprofile/myprofile.php">My Profile</a></li>
-            <li><a href="../Basket/basket.php">Basket</a></li>
+            <li id="backetli"><a href="../Basket/basket.php">Basket</a></li>
         </ul>
     </nav>
+    <main>
 
-    <div id="left">
-        <div id="header">
-            <h1>Filters</h1>
-        </div>
-        <div id="sectionf">
+        <div id="left">
+            <div id="search">
+                <h4>Search :</h4>
+                <input type="text" id="search" name="search" placeholder="Search or type keywords"><br>
+            </div>
             <div id="header">
-                Items
+                <h1>Filters</h1>
             </div>
-            <div id="type">
-                <input type="checkbox" id="item1" name="item1" value="tractor">
-                <label for="item1">Tractor</label>
-                <input type="checkbox" id="item2" name="item2" value="tools">
-                <label for="item2">Tools</label>
-                <input type="checkbox" id="item3" name="item3" value="seeds">
-                <label for="item3">Seeds</label>
-                <input type="checkbox" id="item4" name="item4" value="fertilizer">
-                <label for="">Fertilizer</label>
+            <div id="section1">
+
+                <div id="type">
+                    <!-- Category Filters -->
+                    <h4>Categories</h4>
+                    <input type="checkbox" id="item1" name="category" value="Machinery">
+                    <label for="item1">Machinery</label><br>
+
+                    <input type="checkbox" id="item2" name="category" value="Tools">
+                    <label for="item2">Tools Used in Farming</label><br>
+
+                    <input type="checkbox" id="item3" name="category" value="Seeds">
+                    <label for="item3">Seeds</label><br>
+
+                    <input type="checkbox" id="item4" name="category" value="Fertilizer">
+                    <label for="item4">Fertilizer</label><br>
+
+                    <input type="checkbox" id="item5" name="category" value="Pesticides">
+                    <label for="item5">Pesticides & Herbicides</label><br>
+
+                    <input type="checkbox" id="item6" name="category" value="AnimalHusbandry">
+                    <label for="item6">Animal Husbandry</label><br>
+
+                    <input type="checkbox" id="item7" name="category" value="Irrigation">
+                    <label for="item7">Irrigation Equipment</label><br>
+
+                    <input type="checkbox" id="item8" name="category" value="Packaging">
+                    <label for="item8">Packaging & Storage</label><br>
+
+                    <input type="checkbox" id="item9" name="category" value="ProtectiveGear">
+                    <label for="item9">Protective Gear</label><br>
+
+                    <input type="checkbox" id="item10" name="category" value="EcoFriendly">
+                    <label for="item10">Eco-Friendly Products</label><br><br>
+                </div>
             </div>
+            <div id="section2">
+                <h4>Price Range</h4>
+                <label for="minPrice">Min:</label>
+                <input type="number" id="minPrice" name="minPrice" placeholder="₹0"><br>
+
+                <label for="maxPrice">Max:</label>
+                <input type="number" id="maxPrice" name="maxPrice" placeholder="₹50000"><br><br>
+            </div>
+
 
         </div>
-    </div>
-    <div id="right">
+        <div id="right">
 
-    </div>
+        </div>
+    </main>
 </body>
 
 </html>

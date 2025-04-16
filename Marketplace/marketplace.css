@@ -56,4 +56,86 @@ nav {
     background-color: #70b138;
     color: white;
   }
+
+  /* End of nav bar */
+  main{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 4%;
+  }
+
+  #left{
+    width: 20%;
+    height: auto; 
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 19px 20px;
+
+    box-shadow: rgb(147, 145, 145) -10px 10px;
+  }
+
+  /* Search bar */
+  #search{
+    display: flex;
+
+  }
+  #search h4{
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+  }
+  #search input{
+    border-radius: 4px;
+    height: 25px;
+    width: auto;
+    margin-left: 5px;
+    padding-left: 5px;
+  }
+
+  /*  Filters section*/
+  #header{
+    display: flex;
+    justify-content: center ;
+    margin-top: 30px;
+  }
+
+  #type h4{
+    text-decoration: none;
+    font-size: bolder;
+  }
+  #type input{
+    margin: 5px;
+  }
+
+  /* section 2  */
+
+
+  #section2 h4{
+    text-decoration: none;
+    font-size: bolder;
+  }
   
+  #section2 input {
+    margin: 5px;
+  }
+
+
+  #right{
+    width: 70%;
+    height: max-content;
+    border-radius: 20px ;
+    border: 2px solid black;
+    padding: 40px;
+  }
+  
+  h1, h4, h3{
+    cursor: default;
+  }
+  input, label{
+    cursor: pointer;
+  }
+  
+  input:hover, label:hover{
+    scale: 1.02 ;
+    text-shadow: rgb(184, 183, 183) 2px 2px 2px ;
+  }
