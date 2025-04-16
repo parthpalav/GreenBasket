@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +20,6 @@
             <?php else: ?>
                 <li><a href="../Login/login.php">Login/SignUp</a></li>
             <?php endif; ?>
-
             <li><a href="../Donation/donation.php">Donation</a></li>
             <li><a href="../Myprofile/myprofile.php">My Profile</a></li>
             <li><a href="../Basket/basket.php">Basket</a></li>
@@ -48,7 +50,6 @@
                     <option value="Tools">Agricultural Tools</option>
                     <option value="Health">Healthcare</option>
                     <option value="Farm Equipment">Farm Equipment</option>
-                    <option value="Farm Equipment">Farm Equipment</option>
                 </select>
             </div>
 
@@ -65,8 +66,6 @@
             <button type="submit" class="submit-btn">Submit Donation</button>
         </form>
     </div>
-
-
 </body>
 
 </html>
