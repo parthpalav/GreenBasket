@@ -1,10 +1,14 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
 body {
-  padding: 0px !important;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
 /* NAVBAR */
@@ -46,30 +50,97 @@ nav {
     color: white;
   }
 
-#items, #subtotal {
-    border: 2px solid black;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-#items {
-    float: none;
-}
-
-#subtotal {
-    float: none;
-    margin-left: 20px;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    margin: 0;
-}
-
-#content-wrapper {
+.basket-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 30px;
+}
+
+.basket-left, .basket-right {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    border: 3px solid #333; /* Thick dark border */
+}
+
+.basket-left h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+.basket-left ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.basket-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.basket-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.subtotal-box, .payment-box {
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid #333; /* Thick dark border */
+}
+
+.subtotal-box h2,
+.payment-box h2 {
+    margin-top: 0;
+    color: #388e3c;
+}
+
+.subtotal-box p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+.payment-options {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+.payment-options li {
+    margin-bottom: 12px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.proceed-button {
+    margin-top: 20px;
+}
+
+.btn-proceed {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #426b1f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-proceed:hover {
+    background-color: #365e1f;
 }
