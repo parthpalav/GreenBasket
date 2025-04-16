@@ -17,43 +17,32 @@
             <li><a href="../Myprofile/myprofile.php">My Profile</a></li>
             <li><a href="../Basket/basket.php">Basket</a></li>
         </ul>
-    </nav>
+    </nav>      
 
-    <header>
-        <div class="search-bar">
-            <input type="text" placeholder="Search items...">
+    <div id="left">
+        <div id="header">
+            <h1>Filters</h1>
         </div>
-    </header>
-
-    <div class="container">
-        <main class="catalogue">
-            <div class="card">
-                <div class="image-placeholder">image 1</div>
-                <p>Item 1</p>
+        <div id="sectionf">
+            <div id="header">
+                Items
             </div>
-            <div class="card">
-                <div class="image-placeholder">image 2</div>
-                <p>Item 2</p>
+            <div id="type">
+                <input type="checkbox" id="item1" name="item1" value="tractor">
+                <label for="item1">Tractor</label>
+                <input type="checkbox" id="item2" name="item2" value="tools">
+                <label for="item2">Tools</label>
+                <input type="checkbox" id="item3" name="item3" value="seeds">
+                <label for="item3">Seeds</label>
+                <input type="checkbox" id="item4" name="item4" value="fertilizer">
+                <label for="">Fertilizer</label>
             </div>
-            <div class="card">
-                <div class="image-placeholder">image 3</div>
-                <p>Item 3</p>
-            </div>
-            <div class="card">
-                <div class="image-placeholder">image 4</div>
-                <p>Item 4</p>
-            </div>
-            <div class="card">
-                <div class="image-placeholder">image 5</div>
-                <p>Item 5</p>
-            </div>
-            <div class="card">
-                <div class="image-placeholder">image 6</div>
-                <p>Item 6</p>
-            </div>
-        </main>
+            
+        </div>
     </div>
+    <div id="right">
 
+    </div>
 </body>
 
 </html>

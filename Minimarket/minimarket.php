@@ -148,7 +148,7 @@
     <!-- Button to explore more -->
     <div id="explore">
       <button>
-        <a href="">
+        <a href="../Marketplace/marketplace.php">
           Explore more..
         </a>
       </button>
