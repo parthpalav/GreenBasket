@@ -12,7 +12,12 @@
     <nav id="navbar">
         <ul>
             <li class="home-li"><a href="../Index/index.php">Green Basket</a></li>
-            <li><a href="../Login/login.php">Login/SignUp</a></li>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <li><a href="../Login/logout.php">Sign Out</a></li>
+            <?php else: ?>
+                <li><a href="../Login/login.php">Login/SignUp</a></li>
+            <?php endif; ?>
+
             <li><a href="../Donation/donation.php">Donation</a></li>
             <li><a href="../Myprofile/myprofile.php">My Profile</a></li>
             <li><a href="../Basket/basket.php">Basket</a></li>
