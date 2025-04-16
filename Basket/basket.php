@@ -1,16 +1,25 @@
 <?php
 session_start();
+require_once '../connect.php';
 
-// MOCK DATA UNTIL BACKEND 
-$items = [
-    ['name' => 'Apple', 'price' => 1.2],
-    ['name' => 'Banana', 'price' => 0.8],
-    ['name' => 'Orange', 'price' => 1.5],
-];
-
+$items = [];
 $subtotal = 0;
-foreach ($items as $item) {
-    $subtotal += $item['price'];
+
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+
+    $sql = "SELECT p.product_name, p.price, b.quantity 
+            FROM Basket b
+            JOIN Products p ON b.product_id = p.product_id
+            WHERE b.user_id = ? AND b.status = 'in_cart'";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([$user_id]);
+    $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($items as $item) {
+        $subtotal += $item['price'] * $item['quantity'];
+    }
 }
 ?>
 
@@ -44,12 +53,21 @@ foreach ($items as $item) {
         <div class="basket-left">
             <h2>Items in Your Basket</h2>
             <ul>
-                <?php foreach ($items as $item): ?>
-                    <li class="basket-item">
-                        <span class="item-name"><?php echo htmlspecialchars($item['name']); ?></span>
-                        <span class="item-price">₹<?php echo number_format($item['price'], 2); ?></span>
-                    </li>
-                <?php endforeach; ?>
+                <?php if (!empty($items)): ?>
+                    <?php foreach ($items as $item): ?>
+                        <li class="basket-item">
+                            <span class="item-name">
+                                <?php echo htmlspecialchars($item['product_name']); ?>
+                            </span>
+                            <span class="item-quantity">x<?php echo $item['quantity']; ?></span>
+                            <span class="item-price">
+                                ₹<?php echo number_format($item['price'] * $item['quantity'], 2); ?>
+                            </span>
+                        </li>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <li>No items in your basket.</li>
+                <?php endif; ?>
             </ul>
         </div>
 

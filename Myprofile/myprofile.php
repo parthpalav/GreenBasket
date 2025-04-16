@@ -75,7 +75,6 @@ if (!$userData) {
                     <h1><?php echo $userName; ?></h1>
                     <span class="user-role"><?php echo $userRole; ?></span>
                 </div>
-                <a href="editprofile.php" class="btn edit-profile-btn">Edit Profile</a>
             </div>
         </header>
 
