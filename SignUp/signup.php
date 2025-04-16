@@ -48,8 +48,12 @@
         <?php if (isset($error_message)) echo "<p style='color: red;'>$error_message</p>"; ?>
         <form action="" method="POST">
             <div class="input-group">
-                <label for="name">Full Name:</label>
-                <input type="text" name="name" required>
+                <label for="name">First Name:</label>
+                <input type="text" name="fname" required>
+            </div>
+            <div class="input-group">
+                <label for="name">Last Name:</label>
+                <input type="text" name="lname" required>
             </div>
             <div class="input-group">
                 <label for="email">Email:</label>
@@ -75,8 +79,7 @@
                 <label for="role">Select Role:</label>
                 <select name="role" required>
                     <option value="Customer">Customer</option>
-                    <option value="Farmer">Farmer</option>
-                    <option value="Donor">Donor</option>
+                    <option value="Farmer">Seller</option>
                 </select>
             </div>
             <button type="submit" name="signup">Sign Up</button>
@@ -85,3 +88,4 @@
 </body>
 
 </html>
+
