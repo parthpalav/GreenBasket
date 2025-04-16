@@ -5,9 +5,9 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-require_once '../connect.php';  
+require_once '../connect.php';
 
-$userId = $_SESSION['user_id']; 
+$userId = $_SESSION['user_id'];
 
 $query = "SELECT * FROM Users WHERE user_id = :user_id";
 $stmt = $conn->prepare($query);
@@ -35,6 +35,7 @@ if (!$userData) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,11 +43,17 @@ if (!$userData) {
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap">
 </head>
+
 <body>
     <nav id="navbar">
         <ul>
             <li class="home-li"><a href="../Index/index.php">Green Basket</a></li>
-            <li><a href="../Login/login.php">Login/SignUp</a></li>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <li><a href="../Login/logout.php">Sign Out</a></li>
+            <?php else: ?>
+                <li><a href="../Login/login.php">Login/SignUp</a></li>
+            <?php endif; ?>
+
             <li><a href="../Donation/donation.php">Donation</a></li>
             <li><a href="../Myprofile/myprofile.php">My Profile</a></li>
             <li><a href="../Basket/basket.php">Basket</a></li>
@@ -59,7 +66,7 @@ if (!$userData) {
             <div class="profile-info-container">
                 <div class="profile-picture">
                     <div class="placeholder-image">
-                        <?php 
+                        <?php
                         echo strtoupper(substr($userName, 0, 1));
                         ?>
                     </div>
@@ -111,4 +118,5 @@ if (!$userData) {
 
     <script src="profile.js"></script>
 </body>
+
 </html>
