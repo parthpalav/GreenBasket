@@ -22,6 +22,7 @@ nav .home-li {
   margin-right: 10%;
   font-weight: bolder;
   font-size: 30px;
+  margin-left: 10px;
 }
 
 nav ul span{
@@ -59,6 +60,12 @@ nav a {
 nav a:hover {
   background-color: #426b1f;
   color: white;
+}
+
+input{
+  border-radius: 5px;
+  padding-left: 10px;
+  margin: 10px;
 }
 
 #backetli {
@@ -176,7 +183,7 @@ body {
   width: 230px !important;
   height: 290px !important;
   fill: var(--color-text);
-  background-color:wheat;
+  background-color:whitesmoke;
   aspect-ratio: 16/9;
   border-radius: 0.5rem;
   border: 2px solid black;
@@ -204,11 +211,11 @@ body {
 main{
   height: 500px;
   width: auto;
-  border: 2px solid black;
   margin: 30px;
   padding: 30px;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 10px;
 }
 
 #left{
@@ -216,35 +223,154 @@ main{
   border: 2px solid black;
   height: 100%;
   padding: 10px;
+  border-radius: 10px;
 }
 
 #top{
   width: 100%;
   height: 80%;
-}
-
-#bot{
-  width: 100%;
-  height: 20%;
+  font-size: bolder;
+  font-size: 30px;
 }
 
 #head{
   font-weight: bolder;
 }
 
-#information{
+#top #information{
   padding: 5px;
 }
 
+#bot{
+  width: auto;
+  height: 20%;
+  display: flex;
+  justify-content: start;
+  margin-left: 30px;
+}
+
 #bot button{
+  background-color: green;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#bot button a {
   text-decoration: none;
   color: white;
-  background-color: green;
+}
 
+#bot button:hover{
+  transition: 0.2s ease-in-out;
+  transform: translateY(-5px);
 }
 
 #right{
   width: 30%;
   border: 2px solid black;
+  border-radius: 10px;
+}
+
+
+/* Tractor Section */
+
+#grids{
+  display: flex;
+  flex-direction: column;
+}
+
+#main_grid{
+  height: 110vh;
+  margin: 30px;
+  width: auto;
+}
+#main_grid #header{
+  display: flex;
+  justify-content: center;
+  text-align: center ;
+  padding: 10px;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+#main_grid #header h1:hover{
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.151) 0px 5px 2px;
+}
+
+#main_grid #header h1{
+  display: flex;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 200px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#grid{
+  display: flex;
+  justify-content: center;
+}
+
+#grid-item img{
+  border: 2px solid black;
+  height: 300px;
+  width: 290px;
+  border-radius: 10px;
 
 }
+#grid-item {
+  display: grid;
+  height: max-content;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 60px; /* Optional: Add some space between items */
+}
+
+#grid-item img:hover{
+  transform: scale(1.1);
+  transform: translateY(-3px);
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.199) 0px 0px 10px;
+}
+
+/* Explore button */
+#explore{
+  display: flex;
+  justify-content: center;
+}
+
+#explore button {
+  padding: 5px;
+  background-color: green;
+  border-radius: 10px;
+  height: 8vh;
+  width: 20vh;
+  margin-bottom: 40vh;
+
+}
+
+#explore button a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+}
+
+#explore button:hover{
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  transform: translateY(-10px);
+  box-shadow: rgba(0, 0, 0, 0.149) 1px 10px 10px;
+}
+
+footer{
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 30vh;
+  background-color: rgba(123, 123, 123, 0.878);
+}
+

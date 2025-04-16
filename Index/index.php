@@ -205,7 +205,7 @@
             <div id="details">
                 <div id="name">
                     <h2>Palak Shah</h2>
-                    <h3>Database</h3>
+                    
                 </div>
             </div>
         </div>
@@ -217,7 +217,7 @@
             </div>
             <div id="details">
                 <h2>Pratik Patil</h2>
-                <h3>Frontend</h3>
+                
             </div>
         </div>
 
@@ -228,7 +228,7 @@
             </div>
             <div id="details">
                 <h2>Parth Palav</h2>
-                <h3>Backend</h3>
+                
             </div>
         </div>
 

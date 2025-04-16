@@ -78,10 +78,11 @@
         <div id="left">
           <div id="top">
             <div id="head">
-              <h1>Special Offer</h1>
+              <h1>Special <span style="color: green;">Offer</span></h1>
             </div>
             <div id="information">
-
+              <!-- Add Information here  -->
+              <p>Add information here</p>
             </div>
           </div>
           <div id="bot">
@@ -94,6 +95,68 @@
         </div>
       </main>
     </div>
+
+    <!-- Tractor section -->
+    <div id="girds">
+
+      <div id="main_grid">
+        <div id="header">
+          <h1>Tractor</h1>
+        </div>
+        <div id="information">
+          <div id="photos">
+            <div id="grid">
+              <div id="grid-item">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Tools section -->
+        <div id="main_grid">
+          <div id="header">
+            <h1>Tools</h1>
+          </div>
+            <div id="photos">
+              <div id="grid">
+                <div id="grid-item">
+                  <img src="" alt="">
+                  <img src="" alt="">
+                  <img src="" alt="">
+                  <img src="" alt="">
+                  <img src="" alt="">
+                  <img src="" alt="">
+                  <img src="" alt="">
+                  <img src="" alt="">
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+    <!-- Button to explore more -->
+    <div id="explore">
+      <button>
+        <a href="">
+          Explore more..
+        </a>
+      </button>
+    </div>
+
+    <footer>
+
+    </footer>
 
 
     <script src="minimarket.js"></script>
