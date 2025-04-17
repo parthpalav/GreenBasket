@@ -26,7 +26,7 @@
       <?php endif; ?>
 
       <li><a href="../Myprofile/myprofile.php">My Profile</a></li>
-      <li id="backetli"><a href="../Minimarket/minimarket.php">Marketplace</a></li>
+      <li id="backetli"><a href="../Marketplace/marketplace.php">Marketplace</a></li>
 
     </ul>
   </nav>
@@ -36,43 +36,43 @@
     <div class="marquee">
       <div class="marquee__group">
         <span>
-          <img src="../assets/index_pg_tool/tool2.jpeg" style="height:60px; width:50px; " alt="">
+          <img src="../assets/m_img/2.jpg" style="height:60px; width:50px; " alt="">
         </span>
         <span>
-          <img src="../assets/index_pg_tool/tool1.jpg" style="height:60px; width:50px; " alt="">
+          <img src="../assets/m_img/13.jpg" style="height:60px; width:50px; " alt="">
         </span>
         <span>
-          <img src="../assets/person/patil" style="height:60px; width:50px; " alt="">
+          <img src="../assets/m_img/15.jpg" style="height:60px; width:50px; " alt="">
         </span>
         <span>
-          <img src="../assets/person/patil" style="height:60px; width:50px; " alt="">
+          <img src="../assets/m_img/25.jpg" style="height:60px; width:50px; " alt="">
         </span>
         <span>
-          <img src="../assets/person/patil" style="height:60px; width:50px; " alt="">
+          <img src="../assets/m_img/29.jpg" style="height:60px; width:50px; " alt="">
         </span>
         <span>
-          <img src="../assets/person/patil" style="height:60px; width:50px; " alt="">
+          <img src="../assets/m_img/20.jpg" style="height:60px; width:50px; " alt="">
         </span>
       </div>
 
       <div aria-hidden="true" class="marquee__group">
         <span>
-          <img src="../assets/person/patil" style="height:60px; width:50px; " alt="">
+          <img src="../assets/m_img/2.jpg" style="height:60px; width:50px; " alt="">
         </span>
         <span>
-          <img src="../assets/person/patil" style="height:60px; width:50px; " alt="">
+          <img src="../assets/m_img/13.jpg" style="height:60px; width:50px; " alt="">
         </span>
         <span>
-          <img src="../assets/person/patil" style="height:60px; width:50px; " alt="">
+          <img src="../assets/m_img/15.jpg" style="height:60px; width:50px; " alt="">
         </span>
         <span>
-          <img src="../assets/person/patil" style="height:60px; width:50px; " alt="">
+          <img src="../assets/m_img/25.jpg" style="height:60px; width:50px; " alt="">
         </span>
         <span>
-          <img src="../assets/person/patil" style="height:60px; width:50px; " alt="">
+          <img src="../assets/m_img/29.jpg" style="height:60px; width:50px; " alt="">
         </span>
         <span>
-          <img src="../assets/person/patil" style="height:60px; width:50px; " alt="">
+          <img src="../assets/m_img/20.jpg" style="height:60px; width:50px; " alt="">
         </span>
 
       </div>
@@ -88,7 +88,7 @@
             </div>
             <div id="information">
               <!-- Add Information here  -->
-              <p>Add information here</p>
+              <p>Transform your gardening experience with our Automatic Garden Sprinkler System! Designed for efficiency, it covers large areas with adjustable spray distance, ensuring every plant gets the hydration it needs. Made from durable materials, it’s easy to install—just connect to your garden hose—and saves water while promoting healthy growth. Perfect for home gardens, greenhouses, and farms, this system allows you to spend less time watering and more time enjoying your beautiful outdoor space. Elevate your gardening today and order now!</p>
             </div>
           </div>
           <div id="bot">
@@ -97,7 +97,7 @@
         </div>
 
         <div id="right">
-          <img src="../assets/index_pg_tool/too1.jpg" alt="">
+          <img src="../assets/m_img/19.jpg" alt="">
         </div>
       </main>
     </div>
@@ -113,14 +113,14 @@
           <div id="photos">
             <div id="grid">
               <div id="grid-item">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <img src="../assets/m_img/16.jpg" alt="">
+                <img src="../assets/m_img/15.jpg" alt="">
+                <img src="../assets/m_img/16.jpg" alt="">
+                <img src="../assets/m_img/.jpg" alt="">
+                <img src="../assets/m_img/31.jpg" alt="">
+                <img src="../assets/m_img/30.jpg" alt="">
+                <img src="../assets/m_img/38.jpg" alt="">
+                <img src="../assets/m_img/.jpg" alt="">
               </div>
             </div>
           </div>
@@ -136,14 +136,14 @@
         <div id="photos">
           <div id="grid">
             <div id="grid-item">
-              <img src="" alt="">
-              <img src="" alt="">
-              <img src="" alt="">
-              <img src="" alt="">
-              <img src="" alt="">
-              <img src="" alt="">
-              <img src="" alt="">
-              <img src="" alt="">
+              <img src="../assets/m_img/20.jpg" alt="">
+              <img src="../assets/m_img/22.jpg" alt="">
+              <img src="../assets/m_img/39.jpg" alt="">
+              <img src="../assets/m_img/14.jpg" alt="">
+              <img src="../assets/m_img/33.jpg" alt="">
+              <img src="../assets/m_img/.jpg" alt="">
+              <img src="../assets/m_img/.jpg" alt="">
+              <img src="../assets/m_img/.jpg" alt="">
             </div>
           </div>
         </div>

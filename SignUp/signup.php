@@ -58,6 +58,8 @@ if (isset($_POST['signup'])) {
                 echo "Role being inserted: " . htmlspecialchars($role) . "<br>";
 
                 if ($stmt->execute()) {
+                    // Debug: Output success message
+                    echo "User registered successfully.<br>";
                     $_SESSION['email'] = $email;
                     $_SESSION['user_id'] = $conn->lastInsertId();
                     setcookie("user_email", $email, time() + (24 * 60 * 60), "/");
@@ -65,6 +67,8 @@ if (isset($_POST['signup'])) {
                     exit();
                 } else {
                     $error_message = "Signup failed. Please try again.";
+                    // Debug: Output error information
+                    echo "Error executing statement: " . implode(", ", $stmt->errorInfo()) . "<br>";
                 }
             } catch (PDOException $e) {
                 $error_message = "Error: " . $e->getMessage();
@@ -154,6 +158,21 @@ if (isset($_POST['signup'])) {
                 <input type="file" name="profile_pic" accept="image/*" required>
             </div>
             <button type="submit" name="signup">Sign Up</button>
+        </form>
+    </div>
+</body>
+
+<script>
+    function validateForm() {
+        const password = document.querySelector('input[name="password"]').value;
+        const confirmPassword = document.querySelector('input[name="confirm_password"]').value;
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
         </form>
     </div>
 </body>

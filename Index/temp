@@ -40,13 +40,16 @@ session_start();
             <button class="carousel-button next" data-carousel-button="next" id="arrow_right"></button>
             <ul data-slides>
                 <li class="slide" data-active>
-                    <img src="../assets/ss_img/2.jpg" alt="Farmer 1">
+                    <img src="../assets/slideshow/farm1.jpg" alt="Farmer 1">
                 </li>
                 <li class="slide">
-                    <img src="../assets/ss_img/1.jpg" alt="Farmer 2">
+                    <img src="../assets/slideshow/farm2.jpg" alt="Farmer 2">
                 </li>
                 <li class="slide">
-                    <img src="../assets/ss_img/3.jpg" alt="Farmer 3">
+                    <img src="../assets/slideshow/farm3.jpg" alt="Farmer 3">
+                </li>
+                <li class="slide">
+                    <img src="../assets/slideshow/farm4.jpg" alt="Farmer 4">
                 </li>
             </ul>
         </div>
@@ -66,7 +69,7 @@ session_start();
                 <h2>Market Place</h2>
 
                 <p>
-                Welcome to our dynamic marketplace, uniquely designed to connect local farmers directly with consumers who value fresh, quality produce. Our platform allows farmers to showcase their diverse range of products, from vibrant fruits and vegetables to artisanal cheeses and homemade goods, all sourced locally. Buyers can easily explore these offerings, enjoying the convenience of browsing high-resolution images and detailed descriptions. With a focus on fair pricing, our system ensures that farmers retain a larger share of their earnings, promoting sustainable farming practices and supporting local economies. Seamless online transactions make it easy for customers to select their favorite items, schedule deliveries, and enjoy the freshest produce available. By participating in our marketplace, consumers not only enjoy nutritious food but also strengthen their connection to the farming community, fostering a sustainable and healthy food ecosystem. 
+                    <!-- Add some information in this -->
                 </p>
             </div>
 
@@ -80,24 +83,26 @@ session_start();
 
         <div id="market-right">
             <div class="card">
-                <img src="../assets/m_img/39.jpg" alt="">
+                <img src="../assets/index_pg_tool/image2.jpeg" alt="">
                 <div class="card-content">
                     <h2>
-                        Services
+                        Card Heading
                     </h2>
                     <p>
-                        
+
                     </p>
                     <a href="#" class="button">
-                        
+                        Find out more
                         <span class="material-symbols-outlined">
-                            
+                            arrow_right_alt
                         </span>
                     </a>
                 </div>
             </div>
         </div>
     </div>
+
+
 
     <main>
         <h2 style="font-family: 'Times New Roman', serif; font-style: italic;">Green Basket
@@ -116,7 +121,7 @@ session_start();
                         Donation
                     </h2>
                     <p>
-                        
+
                     </p>
                     <a href="#" class="button">
                         We provide money for the people in need
@@ -132,7 +137,6 @@ session_start();
 
                 <p>
                     <!-- Add some information in this -->
-                    Alongside our marketplace, we proudly offer a dedicated donation service to support farmers who face difficulties due to unforeseen challenges like crop failures, natural disasters, or economic hardships. This program enables customers to make meaningful contributions that help sustain the livelihoods of local farmers. With a simple, secure donation process, users can choose any amount to donate, knowing that every dollar goes directly to assist those in need. We organize regular fundraising campaigns, creating opportunities for customers to engage with the agricultural community, learn about the challenges farmers face, and make a positive impact. By participating in this initiative, customers help build resilience within the farming sector while ensuring that quality food production continues in their communities. Together, we can empower farmers, promote local agriculture, and nurture a compassionate food system that benefits everyone involved.
                 </p>
             </div>
 
@@ -145,6 +149,8 @@ session_start();
 
 
     </div>
+
+
 
     <div id="vision_block">
         <div id="vision_info">
