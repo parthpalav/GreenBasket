@@ -499,3 +499,19 @@ footer section {
 #creator img{
   
 }
+
+
+#mainp{
+  font-family: 'Times New Roman', Times, serif !important ;
+  padding: 0px 50px;
+  font-size: larger;
+}
+
+#market-first-para{
+  font-size: larger;
+}
+
+#market_points{
+  margin-left: 30px;
+}
+

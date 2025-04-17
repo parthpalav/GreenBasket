@@ -14,28 +14,31 @@ if (isset($_POST['submit'])) {
     $description = $_POST['description'];
     $price = $_POST['price'];
     $quantity = $_POST['quantity'];
-    $expiry_date = !empty($_POST['expiry_date']) ? $_POST['expiry_date'] : null;
-    $image = null;
+    $image = null; // Initialize the image variable
 
     // Handle file upload
     if (isset($_FILES['product_image']) && $_FILES['product_image']['error'] === 0) {
-        $uploadDir = '../uploads/product_images/';
+        $uploadDir = '../assets/m_img/'; // Folder to store images
         if (!file_exists($uploadDir)) {
-            mkdir($uploadDir, 0755, true);
+            mkdir($uploadDir, 0755, true); // Create the directory if it doesn't exist
         }
 
         $fileTmp = $_FILES['product_image']['tmp_name'];
-        $fileName = time() . '_' . basename($_FILES['product_image']['name']);
-        $targetPath = $uploadDir . $fileName;
+        $fileName = time() . '_' . basename($_FILES['product_image']['name']); // Generate a unique filename
+        $targetPath = $uploadDir . $fileName; // Full path to store the file
 
         if (move_uploaded_file($fileTmp, $targetPath)) {
-            $image = $fileName;
+            $image = $fileName; // Store the filename
         } else {
             $error = "Failed to upload product image.";
         }
     }
 
+    // If no errors, insert product details into the database
     if (!isset($error)) {
+        $expiry_date = !empty($_POST['expiry_date']) ? $_POST['expiry_date'] : null;
+
+        // Insert data including the image filename and optional expiry_date
         $query = "INSERT INTO Products (seller_id, product_name, description, price, quantity_available, upload_date, expiry_date, product_image)
                   VALUES (:user_id, :name, :description, :price, :quantity, CURDATE(), :expiry_date, :image)";
         $stmt = $conn->prepare($query);
@@ -58,11 +61,13 @@ if (isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Add Product - Green Basket</title>
     <link rel="stylesheet" href="sellerform.css">
 </head>
+
 <body>
     <nav id="navbar">
         <ul>
@@ -77,11 +82,12 @@ if (isset($_POST['submit'])) {
             <li><a href="../Basket/basket.php">Basket</a></li>
         </ul>
     </nav>
-
     <div class="form-container">
         <h2>List a Product for Sale</h2>
-        <?php if (isset($error)) echo "<p class='error'>$error</p>"; ?>
-        <?php if (isset($success)) echo "<p class='success'>$success</p>"; ?>
+        <?php if (isset($error))
+            echo "<p class='error'>$error</p>"; ?>
+        <?php if (isset($success))
+            echo "<p class='success'>$success</p>"; ?>
 
         <form action="" method="POST" enctype="multipart/form-data">
             <div class="input-group">
@@ -111,8 +117,8 @@ if (isset($_POST['submit'])) {
                 <input type="number" name="quantity" required>
             </div>
             <div class="input-group">
-                <label>Expiry Date (optional):</label>
-                <input type="date" name="expiry_date">
+                <label>Expiry Date:</label>
+                <input type="date" name="expiry_date"> 
             </div>
             <div class="input-group">
                 <label>Product Image:</label>
@@ -122,4 +128,5 @@ if (isset($_POST['submit'])) {
         </form>
     </div>
 </body>
+
 </html>

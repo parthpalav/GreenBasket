@@ -74,18 +74,43 @@ session_start();
             <div id="information">
                 <h2>Market Place</h2>
 
-                <p>
-                    Welcome to our dynamic marketplace, uniquely designed to connect local farmers directly with
-                    consumers who value fresh, quality produce. Our platform allows farmers to showcase their diverse
-                    range of products, from vibrant fruits and vegetables to artisanal cheeses and homemade goods, all
-                    sourced locally. Buyers can easily explore these offerings, enjoying the convenience of browsing
-                    high-resolution images and detailed descriptions. With a focus on fair pricing, our system ensures
-                    that farmers retain a larger share of their earnings, promoting sustainable farming practices and
-                    supporting local economies. Seamless online transactions make it easy for customers to select their
-                    favorite items, schedule deliveries, and enjoy the freshest produce available. By participating in
-                    our marketplace, consumers not only enjoy nutritious food but also strengthen their connection to
-                    the farming community, fostering a sustainable and healthy food ecosystem.
-                </p>
+                <div id="mainp">
+                    <p>
+                    <div id="market-first-para"><b>Welcome to our online marketplace!</b></div>
+                    We’re redefining how people buy food—by connecting local farmers directly with consumers through a
+                    seamless digital platform focused on freshness, fairness, and community.
+
+                    </p>
+                    <div id="market_points">
+                        <ul>
+                            <li>Locally sourced goods at your fingertips
+                                Farmers can list fresh fruits, vegetables, artisanal cheeses, and homemade products.
+                                Shoppers
+                                explore these with high-quality images and detailed descriptions, all online.
+
+
+                            </li>
+                            <li>
+                                Fair pricing that empowers farmers
+                                Our platform ensures farmers earn more by cutting out middlemen—supporting sustainable
+                                farming
+                                and
+                                boosting local economies.</li>
+                            <li>
+                                Smooth and simple online experience
+                                Customers can easily browse, order, and schedule deliveries from the comfort of
+                                home—getting
+                                the
+                                freshest produce without stepping outside.</li>
+                        </ul>
+                    </div>
+                    <p>
+                        By shopping with us, you’re not just filling your basket—you’re supporting farmers, building
+                        community, and fueling a healthier food future.
+                    </p>
+
+
+                </div>
             </div>
 
             <div id="button">
@@ -107,7 +132,7 @@ session_start();
 
                     </p>
                     <a href="#" class="button">
-                    <ul style="margin-bottom: 20px" id="li">
+                        <ul style="margin-bottom: 20px" id="li">
                             <li>Machinery</li>
                             <li>Farming Tool</li>
                             <li>Seeds</li>
@@ -155,19 +180,40 @@ session_start();
             <div id="information">
                 <h2 style="text-align:right">Donation</h2>
 
-                <p>
-                    <!-- Add some information in this -->
-                    Alongside our marketplace, we proudly offer a dedicated donation service to support farmers who face
-                    difficulties due to unforeseen challenges like crop failures, natural disasters, or economic
-                    hardships. This program enables customers to make meaningful contributions that help sustain the
-                    livelihoods of local farmers. With a simple, secure donation process, users can choose any amount to
-                    donate, knowing that every dollar goes directly to assist those in need. We organize regular
-                    fundraising campaigns, creating opportunities for customers to engage with the agricultural
-                    community, learn about the challenges farmers face, and make a positive impact. By participating in
-                    this initiative, customers help build resilience within the farming sector while ensuring that
-                    quality food production continues in their communities. Together, we can empower farmers, promote
-                    local agriculture, and nurture a compassionate food system that benefits everyone involved.
-                </p>
+                <div id="mainp">
+                    <p>
+                    <div id="market-first-para"><b>Introducing our Farmer Support Donation Service</b></div>
+
+                    In addition to our online marketplace, we’ve created a way for customers to give back—supporting
+                    local farmers during tough times through secure and meaningful donations.
+
+                    </p>
+                    <div id="market_points">
+                        <ul>
+                            <li>Support when it’s needed most
+                                Donations go directly to farmers impacted by crop failures, natural disasters, or
+                                economic hardship—helping them recover and continue their work.
+
+
+
+                            </li>
+                            <li>
+                                Simple, secure, and flexible giving
+                                Users can donate any amount through our easy online system, confident that their
+                                contributions reach farmers in need without delays or intermediaries.</li>
+                            <li>
+                                Engaged, informed giving
+                                We host regular fundraising campaigns, allowing customers to connect with farmers’
+                                stories, understand their struggles, and be part of a caring, supportive community.</li>
+                        </ul>
+                    </div>
+                    <p>
+                        Together, we can uplift farmers, strengthen local agriculture, and build a more resilient,
+                        compassionate food system for all.
+                    </p>
+
+
+                </div>
             </div>
 
             <div id="button">
@@ -186,10 +232,12 @@ session_start();
                 Our Vision
             </h1>
             <p id="vision_text">
-            <p style="font-size: 25px;">To build a future where agriculture thrives with dignity, transparency, and innovation.</p>
+            <p style="font-size: 25px;">To build a future where agriculture thrives with dignity, transparency, and
+                innovation.</p>
             <br>
             <p style="font-size: 25px;">
-                <b>Green <span style="color:Green; ">Basket</span></b> envisions a digital-first agricultural economy where:
+                <b>Green <span style="color:Green; ">Basket</span></b> envisions a digital-first agricultural economy
+                where:
             </p>
 
             <ul style="margin-bottom:20px; font-size:25px; ">
@@ -203,11 +251,11 @@ session_start();
                 </li>
             </ul>
 
-           <p style="font-size: 25px;">
-           We aim to bridge rural and urban needs by creating value for every participant in the supply chain,
-            while ensuring environmental sustainability and economic growth.
+            <p style="font-size: 25px;">
+                We aim to bridge rural and urban needs by creating value for every participant in the supply chain,
+                while ensuring environmental sustainability and economic growth.
 
-           </p>
+            </p>
             </p>
         </div>
 
@@ -225,19 +273,19 @@ session_start();
                 About us
             </h1>
             <p id="vision_text">
-                <p style="font-size:25px">
+            <p style="font-size:25px">
                 Welcome to Green Basket, your one-stop digital marketplace connecting farmers, agricultural sellers, and
                 eco-conscious consumers. We are on a mission to transform how agricultural goods are exchanged by
                 creating a transparent, supportive, and sustainable ecosystem for everyone involved in the agri-value
                 chain. Whether you're a farmer, seller, or donor, Green Basket is here to empower you with access,
                 choice, and trust.
-                </p>
-                <br>
+            </p>
+            <br>
 
-                <p style="font-size:25px; ">
+            <p style="font-size:25px; ">
                 At our core, we believe in technology as a tool for empowerment—making local produce and agri-essentials
                 accessible across the country, while also supporting communities through our donation programs.
-                </p>
+            </p>
             </p>
         </div>
     </div>
