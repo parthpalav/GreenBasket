@@ -26,7 +26,6 @@ body {
 nav {
     background-color: white;
     border-bottom: 1px solid #426b1f;
-    
 }
 
 nav ul {
@@ -166,64 +165,6 @@ h1, h2, h3 {
     color: #333;
 }
 
-/* User History Styles */
-.history-timeline {
-    position: relative;
-    padding: 20px 0;
-}
-
-.history-timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 30px;
-    width: 2px;
-    background-color: var(--primary-color);
-}
-
-.history-item {
-    display: flex;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.history-date {
-    min-width: 60px;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-align: center;
-    padding-top: 2px;
-}
-
-.history-content {
-    position: relative;
-    margin-left: 20px;
-    padding: 15px;
-    background-color: var(--background-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--card-shadow);
-    flex: 1;
-}
-
-.history-content h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-}
-
-.history-content p {
-    color: #333;
-    line-height: 1.5;
-}
-
-.empty-history {
-    text-align: center;
-    padding: 30px;
-    color: #777;
-    font-style: italic;
-}
-
 /* Error Message Styles */
 .error-message {
     background-color: #ffe6e6;
@@ -332,18 +273,6 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .history-timeline::before {
-        left: 20px;
-    }
-
-    .history-date {
-        min-width: 40px;
-    }
-
-    .history-content {
-        margin-left: 10px;
-    }
-    
     .edit-profile-btn {
         position: relative;
         top: auto;
@@ -380,16 +309,7 @@ footer {
         font-size: 24px;
     }
 
-    .info-card, .history-content {
+    .info-card {
         padding: 15px;
     }
-}
-
-
-.history-card{
-    height: max-content;
-    width: inherit;
-    border: 2px solid black;
-    padding: 20px;
-    border-radius: 10px;
 }

@@ -85,7 +85,6 @@ if (!$userData) {
                     <h1><?php echo $userName; ?></h1>
                     <span class="user-role"><?php echo $userRole; ?></span>
                 </div>
-
             </div>
         </header>
 
@@ -118,12 +117,6 @@ if (!$userData) {
                         <span class="info-value"><?php echo $userRole; ?></span>
                     </div>
                 </div>
-            </section>
-
-            <section class="history-card">
-                <h2>User Activity History</h2>
-                <div class="history-timeline">
-
             </section>
         </main>
 
