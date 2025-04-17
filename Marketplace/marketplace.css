@@ -81,7 +81,6 @@ main {
 #search h4 {
   display: flex;
   font-size: 15px;
-  align-items: center;
 }
 
 #search input {
@@ -92,6 +91,21 @@ main {
   padding-left: 5px;
 }
 
+#search button {
+  background-color: #426b1f;
+  color: white;
+  border-radius: 10px;
+
+  margin-top: 10px;
+  padding: 7px 10px;
+
+  cursor: pointer;
+}
+
+#search button:hover {
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 10px rgb(163, 163, 163);
+}
 /* Filters section */
 #header {
   display: flex;
@@ -116,6 +130,20 @@ main {
 
 #section2 input {
   margin: 5px;
+}
+
+#section2 form button, #button {
+  border-radius: 10px;
+  background-color:#426b1f;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px 0px;
+
+}
+#section2 form button:hover, #button:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgb(163, 163, 163);
 }
 
 h1, h4, h3 {
@@ -167,6 +195,18 @@ input:hover, label:hover {
   box-shadow: 0 8px 20px rgba(112, 177, 56, 0.3);
 }
 
+#box button{
+  border-radius: 10px;
+  background-color:#426b1f;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px 0px;
+  cursor: pointer;
+}
+#box button:hover {
+  background-color: #3e8e41;
+}
+
 /* Add to Cart Form */
 form.add-to-cart-form {
   display: flex;
@@ -197,3 +237,5 @@ form.add-to-cart-form button {
 form.add-to-cart-form button:hover {
   background-color: #5a942d;
 }
+
+

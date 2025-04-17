@@ -1,4 +1,4 @@
-<?php
+<p?php
 session_start();
 ?>
 <!DOCTYPE html>
@@ -180,20 +180,28 @@ session_start();
                 Our Vision
             </h1>
             <p id="vision_text">
-                At Green Basket, we envision a world where sustainable agriculture and compassionate giving come
-                together to uplift communities. Our goal is to create an inclusive platform where farmers can
-                thrive,
-                affordable food reaches those in need, and donors can make a direct impact on people's lives.
-                We believe in: 🌱 Empowering Farmers – Providing a fair marketplace for small-scale farmers to sell
-                their produce directly to consumers. 🍽️ Ending Hunger – Ensuring that every individual, especially
-                the
-                underprivileged, has access to nutritious food. ❤️ Building a Giving Community – Encouraging
-                donations
-                of food and resources to support those in need. 🌍 Sustainable Growth – Promoting environmentally
-                friendly practices that support long-term agricultural success.
-                Through innovation, transparency, and social responsibility, we are committed to transforming lives,
-                one
-                basket at a time. 🚀
+            <p style="font-size: 25px;">To build a future where agriculture thrives with dignity, transparency, and innovation.</p>
+            <br>
+            <p style="font-size: 25px;">
+                <b>Green <span style="color:Green; ">Basket</span></b> envisions a digital-first agricultural economy where:
+            </p>
+
+            <ul style="margin-bottom:20px; font-size:25px; ">
+                <li style="margin-left:60px; ">Farmers and sellers are fairly rewarded for their efforts.
+
+                </li style="margin-left:60px; ">
+                <li style="margin-left:60px; ">Customers get access to fresh, reliable, and sustainable products.
+
+                </li>
+                <li style="margin-left:60px; ">Communities grow together through collaborative support and donation.
+                </li>
+            </ul>
+
+           <p style="font-size: 25px;">
+           We aim to bridge rural and urban needs by creating value for every participant in the supply chain,
+            while ensuring environmental sustainability and economic growth.
+
+           </p>
             </p>
         </div>
 
@@ -211,20 +219,19 @@ session_start();
                 About us
             </h1>
             <p id="vision_text">
-                At Green Basket, we envision a world where sustainable agriculture and compassionate giving come
-                together to uplift communities. Our goal is to create an inclusive platform where farmers can
-                thrive,
-                affordable food reaches those in need, and donors can make a direct impact on people's lives.
-                We believe in: 🌱 Empowering Farmers – Providing a fair marketplace for small-scale farmers to sell
-                their produce directly to consumers. 🍽️ Ending Hunger – Ensuring that every individual, especially
-                the
-                underprivileged, has access to nutritious food. ❤️ Building a Giving Community – Encouraging
-                donations
-                of food and resources to support those in need. 🌍 Sustainable Growth – Promoting environmentally
-                friendly practices that support long-term agricultural success.
-                Through innovation, transparency, and social responsibility, we are committed to transforming lives,
-                one
-                basket at a time. 🚀
+                <p style="font-size:25px">
+                Welcome to Green Basket, your one-stop digital marketplace connecting farmers, agricultural sellers, and
+                eco-conscious consumers. We are on a mission to transform how agricultural goods are exchanged by
+                creating a transparent, supportive, and sustainable ecosystem for everyone involved in the agri-value
+                chain. Whether you're a farmer, seller, or donor, Green Basket is here to empower you with access,
+                choice, and trust.
+                </p>
+                <br>
+
+                <p style="font-size:25px; ">
+                At our core, we believe in technology as a tool for empowerment—making local produce and agri-essentials
+                accessible across the country, while also supporting communities through our donation programs.
+                </p>
             </p>
         </div>
     </div>
@@ -273,32 +280,32 @@ session_start();
                 <div class="footer-col">
                     <h4>Info</h4>
                     <ul class="links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Compressions</a></li>
-                        <li><a href="#">Customers</a></li>
-                        <li><a href="#">Service</a></li>
-                        <li><a href="#">History</a></li>
+                        <li>About Us</li>
+                        <li>Compressions</li>
+                        <li>Customers</li>
+                        <li>Service</li>
+                        <li>>History</li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Explore</h4>
                     <ul class="links">
-                        <li><a href="#">Marketplace</a></li>
-                        <li><a href="#">Donation</a></li>
-                        <li><a href="#">Profile</a></li>
+                        <li>Marketplace</li>
+                        <li>Donation</li>
+                        <li>Profile</li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Legal</h4>
                     <ul class="links">
-                        <li><a href="#">Customer Agreement</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">GDPR</a></li>
-                        <li><a href="#">Security</a></li>
-                        <li><a href="#">Testimonials</a></li>
+                        <li>Customer Agreement</li>
+                        <li>Privacy Policy</li>
+                        <li>GDPR</li>
+                        <li>Security</li>
+                        <li>Testimonials</li>
                     </ul>
                 </div>
-                </div>
+            </div>
             </div>
         </section>
     </footer>

@@ -97,7 +97,7 @@ if (!$products) {
 
                     <button type="submit">Apply Filters</button>
                 </form>
-                <button onclick="window.location.href = 'marketplace.php';">Clear Filters</button>
+                <button id="button" onclick="window.location.href = 'marketplace.php';">Clear Filters</button>
             </div>
         </div>
 

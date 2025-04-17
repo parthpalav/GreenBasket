@@ -342,7 +342,8 @@ main {
 #vision_text {
   text-align: center;
   word-spacing: 2px;
-}
+  
+} 
 #vision_info {
   height: max-content ;
   min-height: 60vh;
@@ -368,6 +369,7 @@ main {
   margin: 30px;
 
 }
+
 #invi {
   width: 600px;
   height: auto;
@@ -394,11 +396,11 @@ main {
 }
 
 #creator:hover {
-  text-shadow: black 2px 2px 10px;
+  text-shadow: rgb(124, 124, 124) 2px 2px 10px;
 }
 
 #image {
-  border: 2px solid black;
+  border: 2px solid rgb(122, 122, 122);
   border-radius: 15px;
   margin-bottom: 5px;
 }
@@ -409,7 +411,7 @@ main {
 }
 
 #image:hover {
-  box-shadow: black 0px 8px 5px;
+  box-shadow: rgb(149, 149, 149) 0px 8px 5px;
   transition: 0.2s ease-in-out;
   transform: translateY(-5px);
   cursor: pointer;

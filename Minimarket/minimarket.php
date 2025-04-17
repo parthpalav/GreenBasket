@@ -23,22 +23,15 @@ session_start();
                 <li><a href="../Login/login.php">Login/SignUp</a></li>
             <?php endif; ?>
 
-<<<<<<< HEAD
-            <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'seller'): ?>
-                <li><a href="../Seller/sellerform.php">Sell</a></li>
-            <?php else: ?>
-                <li><a href="../Donation/donation.php">Donation</a></li>
-            <?php endif; ?>
-=======
+
       <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'seller'): ?>
         <li><a href="../Seller/sellerform.php">Sell</a></li>
       <?php else: ?>
         <li><a href="../Donation/donation.php">Donation</a></li>
       <?php endif; ?>
->>>>>>> 22f4fc6f7e0d07111afc60626651c63e5d141cbd
 
             <li><a href="../Myprofile/myprofile.php">My Profile</a></li>
-            <li id="backetli"><a href="../Minimarket/minimarket.php">Marketplace</a></li>
+            <li id="backetli"><a href="../Marketplace/marketplace.php">Marketplace</a></li>
         </ul>
     </nav>
 
