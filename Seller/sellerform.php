@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <title>Add Product - Green Basket</title>
-    <link rel="stylesheet" href="sellerform_style.css">
+    <link rel="stylesheet" href="sellerform.css">
 </head>
 
 <body>

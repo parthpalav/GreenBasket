@@ -20,7 +20,7 @@
       <?php endif; ?>
 
       <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'seller'): ?>
-        <li><a href="../Sell/sellerform.php">Sell</a></li>
+        <li><a href="../Seller/sellerform.php">Sell</a></li>
       <?php else: ?>
         <li><a href="../Donation/donation.php">Donation</a></li>
       <?php endif; ?>
@@ -119,7 +119,7 @@
                 <img src="../assets/Machinery/1.jpg" alt="">
                 <img src="../assets/m_img/31.jpg" alt="">
                 <img src="../assets/Machinery/tractor/4.jpg" alt="">
-                <img src="../assets/Machinery/tractor/2.jpg"  alt="">
+                <img src="../assets/Machinery/tractor/2.jpg" alt="">
                 <img src="../assets/Machinery/tractor/5.jpg" alt="">
               </div>
             </div>

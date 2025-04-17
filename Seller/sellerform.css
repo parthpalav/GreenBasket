@@ -1,12 +1,20 @@
-  body {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
     font-family: Arial, sans-serif;
     background: #f4f9f4;
-    padding: 40px;
+    margin: 0px;
+    padding: 0px;
 }
 /* NAV BAR */
 nav {
     background-color: white;
     border-bottom: 1px solid #426b1f;
+
   }
   
   nav ul {

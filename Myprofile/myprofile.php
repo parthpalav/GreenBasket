@@ -57,7 +57,7 @@ if (!$userData) {
             <?php endif; ?>
 
             <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'seller'): ?>
-                <li><a href="../Sell/sellerform.php">Sell</a></li>
+                <li><a href="../Seller/sellerform.php">Sell</a></li>
             <?php else: ?>
                 <li><a href="../Donation/donation.php">Donation</a></li>
             <?php endif; ?>
@@ -123,7 +123,7 @@ if (!$userData) {
             <section class="history-card">
                 <h2>User Activity History</h2>
                 <div class="history-timeline">
-                    
+
             </section>
         </main>
 

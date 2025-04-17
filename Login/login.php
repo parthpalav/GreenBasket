@@ -15,6 +15,7 @@ if (isset($_POST['login'])) {
     if ($user && $password === $user['password']) {
         $_SESSION['email'] = $user['email'];
         $_SESSION['user_id'] = $user['user_id'];
+        $_SESSION['role'] = $user['role']; 
         setcookie("user_email", $user['email'], time() + (86400), "/");
         header("Location: ../Index/index.php");
         exit();
@@ -47,7 +48,7 @@ if (isset($_POST['login'])) {
             <?php endif; ?>
 
             <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'seller'): ?>
-                <li><a href="../Sell/sellerform.php">Sell</a></li>
+                <li><a href="../Seller/sellerform.php">Sell</a></li>
             <?php else: ?>
                 <li><a href="../Donation/donation.php">Donation</a></li>
             <?php endif; ?>
