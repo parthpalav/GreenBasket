@@ -19,11 +19,6 @@
         <li><a href="../Login/login.php">Login/SignUp</a></li>
       <?php endif; ?>
 
-<<<<<<< HEAD
-      <li><a href="../Donation/donation.php">Donation</a></li>
-      <li><a href="../Myprofile/myprofile.php">My Profie</a></li>
-      <li id="backetli"><a href="../Marketplace/marketplace.php ">Marketplace</a></li>
-=======
       <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'seller'): ?>
         <li><a href="../Sell/sellerform.php">Sell</a></li>
       <?php else: ?>
@@ -32,7 +27,7 @@
 
       <li><a href="../Myprofile/myprofile.php">My Profile</a></li>
       <li id="backetli"><a href="../Minimarket/minimarket.php">Marketplace</a></li>
->>>>>>> f528c10824ae75e9f073374bb8ed0f109e7c690c
+
     </ul>
   </nav>
 

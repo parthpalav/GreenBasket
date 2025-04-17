@@ -23,7 +23,7 @@ session_start();
             <?php endif; ?>
 
             <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'seller'): ?>
-                <li><a href="../Sell/sellerform.php">Sell</a></li>
+                <li><a href="../Seller/sellerform.php">Sell</a></li>
             <?php else: ?>
                 <li><a href="../Donation/donation.php">Donation</a></li>
             <?php endif; ?>
