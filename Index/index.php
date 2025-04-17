@@ -48,6 +48,15 @@ session_start();
                 <li class="slide">
                     <img src="../assets/ss_img/3.jpg" alt="Farmer 3">
                 </li>
+                <li class="slide">
+                    <img src="../assets/ss_img/4.jpg" alt="Farmer 3">
+                </li>
+                <li class="slide">
+                    <img src="../assets/ss_img/5.jpg" alt="Farmer 3">
+                </li>
+                <li class="slide">
+                    <img src="../assets/ss_img/6    .jpg" alt="Farmer 3">
+                </li>
             </ul>
         </div>
     </section>
@@ -66,7 +75,16 @@ session_start();
                 <h2>Market Place</h2>
 
                 <p>
-                Welcome to our dynamic marketplace, uniquely designed to connect local farmers directly with consumers who value fresh, quality produce. Our platform allows farmers to showcase their diverse range of products, from vibrant fruits and vegetables to artisanal cheeses and homemade goods, all sourced locally. Buyers can easily explore these offerings, enjoying the convenience of browsing high-resolution images and detailed descriptions. With a focus on fair pricing, our system ensures that farmers retain a larger share of their earnings, promoting sustainable farming practices and supporting local economies. Seamless online transactions make it easy for customers to select their favorite items, schedule deliveries, and enjoy the freshest produce available. By participating in our marketplace, consumers not only enjoy nutritious food but also strengthen their connection to the farming community, fostering a sustainable and healthy food ecosystem. 
+                    Welcome to our dynamic marketplace, uniquely designed to connect local farmers directly with
+                    consumers who value fresh, quality produce. Our platform allows farmers to showcase their diverse
+                    range of products, from vibrant fruits and vegetables to artisanal cheeses and homemade goods, all
+                    sourced locally. Buyers can easily explore these offerings, enjoying the convenience of browsing
+                    high-resolution images and detailed descriptions. With a focus on fair pricing, our system ensures
+                    that farmers retain a larger share of their earnings, promoting sustainable farming practices and
+                    supporting local economies. Seamless online transactions make it easy for customers to select their
+                    favorite items, schedule deliveries, and enjoy the freshest produce available. By participating in
+                    our marketplace, consumers not only enjoy nutritious food but also strengthen their connection to
+                    the farming community, fostering a sustainable and healthy food ecosystem.
                 </p>
             </div>
 
@@ -86,12 +104,12 @@ session_start();
                         Services
                     </h2>
                     <p>
-                        
+
                     </p>
                     <a href="#" class="button">
-                        
+
                         <span class="material-symbols-outlined">
-                            
+
                         </span>
                     </a>
                 </div>
@@ -100,7 +118,8 @@ session_start();
     </div>
 
     <main>
-        <h2 style="font-family: 'Times New Roman', serif; font-style: italic;">Green Basket
+        <h2 style="font-family: 'Times New Roman', serif; font-style: italic;"><span style="color:green;">Green
+                Basket</span>
             <span style="font-style: normal;"> - "Supporting Farmers</span>
         </h2>
         <h2> Feeding Communities, and Giving </h2>
@@ -110,13 +129,13 @@ session_start();
     <div id="box">
         <div id="market-right">
             <div class="card">
-                <img src="../assets/index_pg_tool/donation.webp" alt="">
+                <img src="../assets/donation.webp" alt="">
                 <div class="card-content">
                     <h2>
                         Donation
                     </h2>
                     <p>
-                        
+
                     </p>
                     <a href="#" class="button">
                         We provide money for the people in need
@@ -132,7 +151,16 @@ session_start();
 
                 <p>
                     <!-- Add some information in this -->
-                    Alongside our marketplace, we proudly offer a dedicated donation service to support farmers who face difficulties due to unforeseen challenges like crop failures, natural disasters, or economic hardships. This program enables customers to make meaningful contributions that help sustain the livelihoods of local farmers. With a simple, secure donation process, users can choose any amount to donate, knowing that every dollar goes directly to assist those in need. We organize regular fundraising campaigns, creating opportunities for customers to engage with the agricultural community, learn about the challenges farmers face, and make a positive impact. By participating in this initiative, customers help build resilience within the farming sector while ensuring that quality food production continues in their communities. Together, we can empower farmers, promote local agriculture, and nurture a compassionate food system that benefits everyone involved.
+                    Alongside our marketplace, we proudly offer a dedicated donation service to support farmers who face
+                    difficulties due to unforeseen challenges like crop failures, natural disasters, or economic
+                    hardships. This program enables customers to make meaningful contributions that help sustain the
+                    livelihoods of local farmers. With a simple, secure donation process, users can choose any amount to
+                    donate, knowing that every dollar goes directly to assist those in need. We organize regular
+                    fundraising campaigns, creating opportunities for customers to engage with the agricultural
+                    community, learn about the challenges farmers face, and make a positive impact. By participating in
+                    this initiative, customers help build resilience within the farming sector while ensuring that
+                    quality food production continues in their communities. Together, we can empower farmers, promote
+                    local agriculture, and nurture a compassionate food system that benefits everyone involved.
                 </p>
             </div>
 
@@ -207,8 +235,7 @@ session_start();
 
         <div id="creator" class="drop_img">
             <div id="image">
-                <img src="../assets/person/shah.jpg"
-                    alt="">
+                <img src="../assets/person/shah.jpg" alt="">
             </div>
             <div id="details">
                 <div id="name">
@@ -220,8 +247,7 @@ session_start();
 
         <div id="creator">
             <div id="image">
-                <img src="../assets/person/patil.jpg"
-                    alt="">
+                <img src="../assets/person/patil.jpg" alt="">
             </div>
             <div id="details">
                 <h2>Pratik Patil</h2>
@@ -231,8 +257,7 @@ session_start();
 
         <div id="creator" class="drop_img">
             <div id="image">
-                <img src="../assets/person/Palav.jpg"
-                    alt="">
+                <img src="../assets/person/Palav.jpg" alt="">
             </div>
             <div id="details">
                 <h2>Parth Palav</h2>
@@ -243,7 +268,39 @@ session_start();
     </div>
 
     <footer>
-
+        <section class="footer">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Info</h4>
+                    <ul class="links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Compressions</a></li>
+                        <li><a href="#">Customers</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">History</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="links">
+                        <li><a href="#">Marketplace</a></li>
+                        <li><a href="#">Donation</a></li>
+                        <li><a href="#">Profile</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="links">
+                        <li><a href="#">Customer Agreement</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </section>
     </footer>
 
     <script>
@@ -274,7 +331,7 @@ session_start();
                 width
             } = img.getBoundingClientRect();
             const halfImgWidth = width / 2;
-            img.addEventListener("mousemove", function(e) {
+            img.addEventListener("mousemove", function (e) {
                 const xPos = e.pageX - img.offsetLeft;
                 this.classList.remove("cursor-prev", "cursor-next");
                 if (xPos > halfImgWidth) {

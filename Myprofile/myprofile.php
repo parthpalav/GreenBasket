@@ -41,7 +41,8 @@ if (!$userData) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile - GreenBasket</title>
     <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap">
 </head>
 
 <body>
@@ -72,7 +73,8 @@ if (!$userData) {
             <div class="profile-info-container">
                 <div class="profile-picture">
                     <?php if ($profilePicture): ?>
-                        <img src="<?php echo $profilePicture; ?>" alt="Profile Picture" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid #ccc;">
+                        <img src="<?php echo $profilePicture; ?>" alt="Profile Picture"
+                            style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid #ccc;">
                     <?php else: ?>
                         <div class="placeholder-image">
                             <?php echo strtoupper(substr($userName, 0, 1)); ?>
@@ -119,6 +121,8 @@ if (!$userData) {
             </section>
 
             <section class="history-card">
+                <h2>User Activity History</h2>
+                <div class="history-timeline">
                     
             </section>
         </main>

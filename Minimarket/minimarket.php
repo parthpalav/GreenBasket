@@ -115,12 +115,12 @@
               <div id="grid-item">
                 <img src="../assets/m_img/16.jpg" alt="">
                 <img src="../assets/m_img/15.jpg" alt="">
-                <img src="../assets/m_img/16.jpg" alt="">
-                <img src="../assets/m_img/.jpg" alt="">
+                <img src="../assets/Machinery/tractor/1.jpg" alt="">
+                <img src="../assets/Machinery/1.jpg" alt="">
                 <img src="../assets/m_img/31.jpg" alt="">
-                <img src="../assets/m_img/30.jpg" alt="">
-                <img src="../assets/m_img/38.jpg" alt="">
-                <img src="../assets/m_img/.jpg" alt="">
+                <img src="../assets/Machinery/tractor/4.jpg" alt="">
+                <img src="../assets/Machinery/tractor/2.jpg"  alt="">
+                <img src="../assets/Machinery/tractor/5.jpg" alt="">
               </div>
             </div>
           </div>

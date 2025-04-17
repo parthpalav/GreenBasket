@@ -420,6 +420,8 @@ main {
 }
 
 /* Footer */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
 footer {
   background-color: rgb(63, 63, 63);
   margin-top: 50px;
@@ -431,9 +433,41 @@ footer {
   text-shadow: black 2px 2px 2px;
   height: 200px;
   margin-top: 30vh;
+
 }
 
 footer p {
   margin: 5px 0;
 }
 
+footer section {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-row{
+  display: flex;
+  justify-content:center; 
+}
+
+.footer-col{
+  margin: 0px 40px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col h4 {
+  color: green;
+}
+
+.footer-col li {
+  padding: 5px 0px;
+}
+
+.footer-col a{
+  text-decoration: none;
+  color: white;
+ 
+}

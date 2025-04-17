@@ -29,7 +29,7 @@ session_start();
             <?php endif; ?>
 
             <li><a href="../Myprofile/myprofile.php">My Profile</a></li>
-            <li id="backetli"><a href="../Minimarket/minimarket.php">Marketplace</a></li>
+            <li id="backetli"><a href="../Basket/basket.php">Basket</a></li>
         </ul>
     </nav>
     <main>

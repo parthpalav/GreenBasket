@@ -384,3 +384,12 @@ footer {
         padding: 15px;
     }
 }
+
+
+.history-card{
+    height: max-content;
+    width: inherit;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 10px;
+}
