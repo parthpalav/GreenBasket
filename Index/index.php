@@ -1,4 +1,4 @@
-<p?php
+<?php
 session_start();
 ?>
 <!DOCTYPE html>
@@ -40,22 +40,22 @@ session_start();
             <button class="carousel-button next" data-carousel-button="next" id="arrow_right"></button>
             <ul data-slides>
                 <li class="slide" data-active>
-                    <img src="../assets/ss_img/2.jpg" alt="Farmer 1">
+                    <img src="../assets/ss_i/3.jpg" alt="Farmer 1">
                 </li>
                 <li class="slide">
-                    <img src="../assets/ss_img/1.jpg" alt="Farmer 2">
+                    <img src="../assets/ss_i/1.jpg" alt="Farmer 2">
                 </li>
                 <li class="slide">
-                    <img src="../assets/ss_img/3.jpg" alt="Farmer 3">
+                    <img src="../assets/ss_i/2.jpg" alt="Farmer 3">
                 </li>
                 <li class="slide">
-                    <img src="../assets/ss_img/4.jpg" alt="Farmer 3">
+                    <img src="../assets/ss_i/4.jpg" alt="Farmer 3">
                 </li>
                 <li class="slide">
-                    <img src="../assets/ss_img/5.jpg" alt="Farmer 3">
+                    <img src="../assets/ss_i/5.jpg" alt="Farmer 3">
                 </li>
                 <li class="slide">
-                    <img src="../assets/ss_img/6    .jpg" alt="Farmer 3">
+                    <img src="../assets/ss_i/6.jpg" alt="Farmer 3">
                 </li>
             </ul>
         </div>
@@ -101,13 +101,19 @@ session_start();
                 <img src="../assets/m_img/39.jpg" alt="">
                 <div class="card-content">
                     <h2>
-                        Services
+                        Products
                     </h2>
                     <p>
 
                     </p>
                     <a href="#" class="button">
-
+                    <ul style="margin-bottom: 20px" id="li">
+                            <li>Machinery</li>
+                            <li>Farming Tool</li>
+                            <li>Seeds</li>
+                            <li>Fertilizers</li>
+                            <li>Persticides</li>
+                        </ul>
                         <span class="material-symbols-outlined">
 
                         </span>
@@ -242,7 +248,7 @@ session_start();
 
         <div id="creator" class="drop_img">
             <div id="image">
-                <img src="../assets/person/shah.jpg" alt="">
+                <img src="../assets/person/shah1.jpg" alt="">
             </div>
             <div id="details">
                 <div id="name">
@@ -254,7 +260,7 @@ session_start();
 
         <div id="creator">
             <div id="image">
-                <img src="../assets/person/patil.jpg" alt="">
+                <img src="../assets/person/patil1.jpg" alt="">
             </div>
             <div id="details">
                 <h2>Pratik Patil</h2>
@@ -264,7 +270,7 @@ session_start();
 
         <div id="creator" class="drop_img">
             <div id="image">
-                <img src="../assets/person/Palav.jpg" alt="">
+                <img src="../assets/person/Palav1.jpg" alt="">
             </div>
             <div id="details">
                 <h2>Parth Palav</h2>

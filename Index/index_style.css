@@ -10,6 +10,10 @@ body {
   background-color: white;
 }
 
+#li{
+  margin: 10px 0px;
+}
+
 main {
   padding: 1rem;
   text-align: center;
@@ -355,7 +359,15 @@ main {
   padding-bottom: 10px;
   width: 80%;
   margin: 30px;
+  box-shadow: -2px 8px 8px rgb(137, 137, 137);
 }
+
+#vision_info:hover{
+  transition: 0.2s ease-in-out;
+  transform: translateY(-3px);
+  box-shadow: -5px 10px 10px rgb(137, 137, 137);
+}
+
 
 #vision_photos {
   height: max-content ;
@@ -367,7 +379,13 @@ main {
   padding-bottom: 10px;
   width: 80%;
   margin: 30px;
+  box-shadow: 2px 8px 8px rgb(137, 137, 137);
+}
 
+#vision_photos:hover{
+  transition: 0.2s ease-in-out;
+  transform: translateY(-3px);
+  box-shadow: 5px 10px 10px rgb(137, 137, 137);
 }
 
 #invi {
@@ -472,4 +490,12 @@ footer section {
   text-decoration: none;
   color: white;
  
+}
+
+#vision_text, #information{
+  font-family: 'Times New Roman', Times, serif !important ; 
+}
+
+#creator img{
+  
 }

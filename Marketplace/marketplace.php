@@ -1,6 +1,6 @@
 <?php
-// Include the connection file to connect to the database
 include '../connect.php';
+session_start();
 
 // Initialize variables for search and filter values
 $search = isset($_GET['search']) ? $_GET['search'] : '';

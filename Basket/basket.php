@@ -8,6 +8,12 @@ $subtotal = 0;
 if (isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
 
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['clear_basket'])) {
+        $clearQuery = $conn->prepare("DELETE FROM Basket WHERE user_id = ? AND status = 'in_cart'");
+        $clearQuery->execute([$user_id]);
+        header("Location: basket.php");
+    }
+
     $sql = "SELECT p.product_name, p.price, b.quantity 
             FROM Basket b
             JOIN Products p ON b.product_id = p.product_id
@@ -22,6 +28,7 @@ if (isset($_SESSION['user_id'])) {
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -86,16 +93,22 @@ if (isset($_SESSION['user_id'])) {
 
             <div class="payment-box">
                 <h2>Select Payment Method</h2>
-                <ul class="payment-options">
-                    <li><input type="radio" name="payment" id="credit" checked> <label for="credit">Credit Card</label></li>
-                    <li><input type="radio" name="payment" id="debit"> <label for="debit">Debit Card</label></li>
-                    <li><input type="radio" name="payment" id="upi"> <label for="upi">UPI</label></li>
-                    <li><input type="radio" name="payment" id="netbanking"> <label for="netbanking">NetBanking</label></li>
-                </ul>
+                <form method="POST" action="succesfultransaction.php">
+                <input type="radio" name="payment" value="Credit Card" id="credit" checked> <label for="credit">Credit
+                    Card</label><br>
+                <input type="radio" name="payment" value="Debit Card" id="debit"> <label for="debit">Debit
+                    Card</label><br>
+                <input type="radio" name="payment" value="UPI" id="upi"> <label for="upi">UPI</label><br>
+                <input type="radio" name="payment" value="Net Banking" id="netbanking"> <label
+                    for="netbanking">NetBanking</label><br>
+                <button type="submit" class="btn-proceed">Proceed to Payment</button>
+            </form>
             </div>
-            <div class="proceed-button">
-                <a href="succesfultransaction.php" class="btn-proceed">Proceed to Payment</a>
-            </div>
+
+            <form method="POST" style="margin-top: 10px;">
+                <input type="hidden" name="clear_basket" value="1">
+                <button type="submit" class="btn-clear">Clear Basket</button>
+            </form>
         </div>
     </div>
 

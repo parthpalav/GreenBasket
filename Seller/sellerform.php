@@ -14,29 +14,28 @@ if (isset($_POST['submit'])) {
     $description = $_POST['description'];
     $price = $_POST['price'];
     $quantity = $_POST['quantity'];
-    $image = null; // Initialize the image variable
+    $expiry_date = !empty($_POST['expiry_date']) ? $_POST['expiry_date'] : null;
+    $image = null;
 
     // Handle file upload
     if (isset($_FILES['product_image']) && $_FILES['product_image']['error'] === 0) {
-        $uploadDir = '../uploads/product_images/'; // Folder to store images
+        $uploadDir = '../uploads/product_images/';
         if (!file_exists($uploadDir)) {
-            mkdir($uploadDir, 0755, true); // Create the directory if it doesn't exist
+            mkdir($uploadDir, 0755, true);
         }
 
         $fileTmp = $_FILES['product_image']['tmp_name'];
-        $fileName = time() . '_' . basename($_FILES['product_image']['name']); // Generate a unique filename
-        $targetPath = $uploadDir . $fileName; // Full path to store the file
+        $fileName = time() . '_' . basename($_FILES['product_image']['name']);
+        $targetPath = $uploadDir . $fileName;
 
         if (move_uploaded_file($fileTmp, $targetPath)) {
-            $image = $fileName; // Store the filename
+            $image = $fileName;
         } else {
             $error = "Failed to upload product image.";
         }
     }
 
-    // If no errors, insert product details into the database
     if (!isset($error)) {
-        // Insert data including the image filename
         $query = "INSERT INTO Products (seller_id, product_name, description, price, quantity_available, upload_date, expiry_date, product_image)
                   VALUES (:user_id, :name, :description, :price, :quantity, CURDATE(), :expiry_date, :image)";
         $stmt = $conn->prepare($query);
@@ -45,7 +44,7 @@ if (isset($_POST['submit'])) {
         $stmt->bindParam(':description', $description);
         $stmt->bindParam(':price', $price);
         $stmt->bindParam(':quantity', $quantity);
-        $stmt->bindParam(':expiry_date', $_POST['expiry_date']); // Ensure expiry date is passed
+        $stmt->bindParam(':expiry_date', $expiry_date);
         $stmt->bindParam(':image', $image);
 
         if ($stmt->execute()) {
@@ -59,13 +58,11 @@ if (isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Add Product - Green Basket</title>
     <link rel="stylesheet" href="sellerform.css">
 </head>
-
 <body>
     <nav id="navbar">
         <ul>
@@ -80,6 +77,7 @@ if (isset($_POST['submit'])) {
             <li><a href="../Basket/basket.php">Basket</a></li>
         </ul>
     </nav>
+
     <div class="form-container">
         <h2>List a Product for Sale</h2>
         <?php if (isset($error)) echo "<p class='error'>$error</p>"; ?>
@@ -113,8 +111,8 @@ if (isset($_POST['submit'])) {
                 <input type="number" name="quantity" required>
             </div>
             <div class="input-group">
-                <label>Expiry Date:</label>
-                <input type="date" name="expiry_date" required>
+                <label>Expiry Date (optional):</label>
+                <input type="date" name="expiry_date">
             </div>
             <div class="input-group">
                 <label>Product Image:</label>
@@ -124,5 +122,4 @@ if (isset($_POST['submit'])) {
         </form>
     </div>
 </body>
-
 </html>

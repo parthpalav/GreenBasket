@@ -7,48 +7,46 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
 }
 
 /* NAVBAR */
 nav {
     background-color: white;
     border-bottom: 1px solid #426b1f;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style: none;
     display: flex;
-  }
-  nav .home-li {
+}
+
+nav .home-li {
     margin-right: auto;
     font-weight: bolder;
     font-size: x-large;
-  }
-  
-  nav .home-li a {
+}
+
+nav .home-li a {
     padding: 10px;
     color: #426b1f;
-  }
-  
-  nav li {
+}
+
+nav li {
     display: flex;
-  }
-  
-  nav a {
+}
+
+nav a {
     display: flex;
     text-decoration: none;
     color: black;
     padding: 1em 2em;
     transition: #426b1f 150ms ease;
-  }
-  
-  nav a:hover {
-    transition: 0.1s ea;
+}
+
+nav a:hover {
     background-color: #426b1f;
     color: white;
-  }
+}
 
 .basket-container {
     display: flex;
@@ -58,13 +56,14 @@ nav {
     gap: 30px;
 }
 
-.basket-left, .basket-right {
+.basket-left,
+.basket-right {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     flex: 1;
-    border: 3px solid #333; /* Thick dark border */
+    border: 3px solid #333;
 }
 
 .basket-left h2 {
@@ -75,7 +74,6 @@ nav {
 
 .basket-left ul {
     list-style: none;
-    padding: 0;
     font-size: 18px;
     line-height: 1.6;
 }
@@ -93,11 +91,12 @@ nav {
     gap: 30px;
 }
 
-.subtotal-box, .payment-box {
+.subtotal-box,
+.payment-box {
     background-color: #e8f5e9;
     padding: 20px;
     border-radius: 10px;
-    border: 3px solid #333; /* Thick dark border */
+    border: 3px solid #333;
 }
 
 .subtotal-box h2,
@@ -128,19 +127,28 @@ input[type="radio"] {
 }
 
 .proceed-button {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     margin-top: 20px;
 }
 
-.btn-proceed {
+.btn-proceed,
+.btn-clear {
     display: inline-block;
     padding: 10px 20px;
     background-color: #426b1f;
     color: white;
     text-decoration: none;
+    border: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
 }
 
-.btn-proceed:hover {
+.btn-proceed:hover,
+.btn-clear:hover {
     background-color: #365e1f;
 }

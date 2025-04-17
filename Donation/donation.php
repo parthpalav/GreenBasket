@@ -1,13 +1,45 @@
 <?php
+include '../connect.php';
 session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = isset($_POST['name']) ? $_POST['name'] : '';
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $donation_category = isset($_POST['category']) ? $_POST['category'] : '';
+    $quantity = isset($_POST['quantity']) ? (int) $_POST['quantity'] : 0;
+    $address = isset($_POST['address']) ? $_POST['address'] : '';
+    $donation_date = date('Y-m-d');
+
+    try {
+        $query = "INSERT INTO Donations (donor_name, email, category, quantity, address, donation_date)
+                  VALUES (:name, :email, :category, :quantity, :address, :donation_date)";
+
+        $stmt = $conn->prepare($query);
+
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':category', $donation_category);
+        $stmt->bindParam(':quantity', $quantity, PDO::PARAM_INT);
+        $stmt->bindParam(':address', $address);
+        $stmt->bindParam(':donation_date', $donation_date);
+
+        $stmt->execute();
+
+        echo "<script>alert('Thank you for your donation!');</script>";
+    } catch (PDOException $e) {
+        echo "<script>alert('Error: " . $e->getMessage() . "');</script>";
+    }
+}
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donation form</title>
+    <title>Donation Form</title>
     <link rel="stylesheet" href="donation.css">
 </head>
 
@@ -34,7 +66,7 @@ session_start();
 
     <div class="donation-form-container">
         <h1>Make a Donation</h1>
-        <form action="process_donation.php" method="POST">
+        <form action="donation.php" method="POST">
             <div class="form-group">
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -49,13 +81,13 @@ session_start();
                 <label for="category">Donation Category:</label>
                 <select id="category" name="category" required>
                     <option value="">Select a category</option>
-                    <option value="Food">Food & Groceries</option>
-                    <option value="Clothes">Clothing & Footwear</option>
-                    <option value="Animal Care">Animal Care</option>
-                    <option value="Money">Monetary Donation</option>
-                    <option value="Tools">Agricultural Tools</option>
-                    <option value="Health">Healthcare</option>
-                    <option value="Farm Equipment">Farm Equipment</option>
+                    <option value="food and groceries">Food & Groceries</option>
+                    <option value="clothing and footwear">Clothing & Footwear</option>
+                    <option value="animal care">Animal Care</option>
+                    <option value="monetory donation">Monetary Donation</option>
+                    <option value="agricultural tools">Agricultural Tools</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="farm equipment">Farm Equipment</option>
                 </select>
             </div>
 

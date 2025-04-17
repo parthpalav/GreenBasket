@@ -145,9 +145,9 @@ session_start();
               <img src="../assets/m_img/39.jpg" alt="">
               <img src="../assets/m_img/14.jpg" alt="">
               <img src="../assets/m_img/33.jpg" alt="">
-              <img src="../assets/m_img/.jpg" alt="">
-              <img src="../assets/m_img/.jpg" alt="">
-              <img src="../assets/m_img/.jpg" alt="">
+              <img src="../assets/m_img/gloves.jpg" alt="">
+              <img src="../assets/m_img/boots.jpg" alt="">
+              <img src="../assets/m_img/mask.jpg" alt="">
             </div>
           </div>
         </div>
